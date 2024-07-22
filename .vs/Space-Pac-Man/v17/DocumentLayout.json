@@ -1,0 +1,394 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\MainMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:MainMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\MainMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:MainMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Mapa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Mapa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Ghost.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Ghost.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Boss.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Boss.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Municion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Municion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\GhostManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:GhostManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Mapa.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Mapa.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Municion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Municion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\AStar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:AStar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Collision.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Collision.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Vida.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Vida.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Vida.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Vida.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\GhostManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:GhostManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Ghost.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:Ghost.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\AStar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{57A8F25B-2D48-4B34-8317-A5C41E1840AA}|Space-Pac-Man.vcxproj|solutionrelative:AStar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Main.cpp",
+              "RelativeDocumentMoniker": "Main.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Main.cpp",
+              "RelativeToolTip": "Main.cpp",
+              "ViewState": "AQIAADEAAAAAAAAAAAAmwCoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-21T17:48:09.114Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mapa.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Mapa.cpp",
+              "RelativeDocumentMoniker": "Mapa.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Mapa.cpp",
+              "RelativeToolTip": "Mapa.cpp",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAAAOoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-21T17:52:09.754Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Mapa.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Mapa.h",
+              "RelativeDocumentMoniker": "Mapa.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Mapa.h",
+              "RelativeToolTip": "Mapa.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-16T02:42:26.993Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GhostManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\GhostManager.cpp",
+              "RelativeDocumentMoniker": "GhostManager.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\GhostManager.cpp",
+              "RelativeToolTip": "GhostManager.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-14T22:42:36.779Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Ghost.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Ghost.h",
+              "RelativeDocumentMoniker": "Ghost.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Ghost.h",
+              "RelativeToolTip": "Ghost.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-29T00:39:36.376Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Municion.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Municion.cpp",
+              "RelativeDocumentMoniker": "Municion.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Municion.cpp",
+              "RelativeToolTip": "Municion.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-18T04:07:51.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Boss.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Boss.h",
+              "RelativeDocumentMoniker": "Boss.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Boss.h",
+              "RelativeToolTip": "Boss.h",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-18T03:46:05.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Player.cpp",
+              "RelativeDocumentMoniker": "Player.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Player.cpp",
+              "RelativeToolTip": "Player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-21T17:51:17.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Municion.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Municion.h",
+              "RelativeDocumentMoniker": "Municion.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Municion.h",
+              "RelativeToolTip": "Municion.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-18T04:07:26.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Boss.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Boss.cpp",
+              "RelativeDocumentMoniker": "Boss.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Boss.cpp",
+              "RelativeToolTip": "Boss.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-18T03:45:35.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\MainMenu.cpp",
+              "RelativeDocumentMoniker": "MainMenu.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\MainMenu.cpp",
+              "RelativeToolTip": "MainMenu.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-17T23:55:18.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenu.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\MainMenu.h",
+              "RelativeDocumentMoniker": "MainMenu.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\MainMenu.h",
+              "RelativeToolTip": "MainMenu.h",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-17T23:41:47.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AStar.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\AStar.h",
+              "RelativeDocumentMoniker": "AStar.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\AStar.h",
+              "RelativeToolTip": "AStar.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-13T04:50:43.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AStar.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\AStar.cpp",
+              "RelativeDocumentMoniker": "AStar.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\AStar.cpp",
+              "RelativeToolTip": "AStar.cpp",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-13T04:42:08.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Collision.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Collision.cpp",
+              "RelativeDocumentMoniker": "Collision.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Collision.cpp",
+              "RelativeToolTip": "Collision.cpp",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEMAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-21T17:49:46.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Scene.h",
+              "RelativeDocumentMoniker": "Scene.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Scene.h",
+              "RelativeToolTip": "Scene.h",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-21T17:50:22.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Ghost.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Ghost.cpp",
+              "RelativeDocumentMoniker": "Ghost.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Ghost.cpp",
+              "RelativeToolTip": "Ghost.cpp",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-17T19:23:34.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Scene.cpp",
+              "RelativeDocumentMoniker": "Scene.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Scene.cpp",
+              "RelativeToolTip": "Scene.cpp",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAmwH0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-21T17:50:31.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GhostManager.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\GhostManager.h",
+              "RelativeDocumentMoniker": "GhostManager.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\GhostManager.h",
+              "RelativeToolTip": "GhostManager.h",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAB0AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-07-14T22:37:30.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Collision.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Collision.h",
+              "RelativeDocumentMoniker": "Collision.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Collision.h",
+              "RelativeToolTip": "Collision.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-21T17:49:27.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Vida.cpp",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Vida.cpp",
+              "RelativeDocumentMoniker": "Vida.cpp",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Vida.cpp",
+              "RelativeToolTip": "Vida.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-29T20:44:23.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Vida.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Vida.h",
+              "RelativeDocumentMoniker": "Vida.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Vida.h",
+              "RelativeToolTip": "Vida.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-29T20:40:15.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Player.h",
+              "RelativeDocumentMoniker": "Player.h",
+              "ToolTip": "C:\\Users\\Pedro\\OneDrive\\Escritorio\\Space-Pac-Man\\Player.h",
+              "RelativeToolTip": "Player.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-21T17:50:58.642Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

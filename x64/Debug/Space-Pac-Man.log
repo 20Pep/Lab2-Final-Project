@@ -1,0 +1,79 @@
+﻿  AStar.cpp
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\AStar.cpp(46,52): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  Collision.cpp
+  Main.cpp
+  Scene.cpp
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,105): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,105): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,105): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,105): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,105): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,80): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,80): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,80): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,80): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(31,80): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,70): warning C4244: 'argumento': conversión de 'T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,70): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,70): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,70): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,70): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,42): warning C4244: 'argumento': conversión de 'T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,42): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,42): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,42): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(32,42): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,109): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,109): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,109): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,109): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,109): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,85): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,85): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,85): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,85): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(41,85): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,88): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,88): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,88): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,88): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,88): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,63): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,63): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,63): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,63): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(62,63): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,91): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,91): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,91): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,91): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,91): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,66): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,66): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,66): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,66): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(63,66): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,114): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,114): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,114): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,114): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,114): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,89): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,89): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,89): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,89): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(64,89): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,104): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,104): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,104): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,104): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,104): warning C4244:         ]
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,79): warning C4244: 'argumento': conversión de 'const T' a 'int'; posible pérdida de datos
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,79): warning C4244:         with
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,79): warning C4244:         [
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,79): warning C4244:             T=float
+C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\Scene.cpp(78,79): warning C4244:         ]
+  Generando código...
+  Space-Pac-Man.vcxproj -> C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\x64\Debug\Space-Pac-Man.exe
+  C:\Users\PAIS GAMER\Desktop\UTN Nivelacion\Programación\Space-Pac-ManV9\Space-Pac-Man1\packages\SFML-cpp.redist.2.5.1.1\build\native\bin\x64\Debug\openal32.dll
+  1 archivo(s) copiado(s)

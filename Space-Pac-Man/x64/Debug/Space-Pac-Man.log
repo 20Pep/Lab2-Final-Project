@@ -1,0 +1,255 @@
+﻿  AStar.cpp
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\AStar.cpp(46,52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Boss.cpp
+  Collision.cpp
+  Ghost.cpp
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Ghost.cpp(5,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Ghost.cpp(5,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Ghost.cpp(7,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Ghost.cpp(23,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Ghost.cpp(23,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GhostManager.cpp
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(25,9): warning C4101: 'ghost': unreferenced local variable
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(57,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(57,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(60,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(60,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(63,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(63,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(66,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(66,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(76,28): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(76,28): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(76,28): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(76,28): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(76,28): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(79,29): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(79,29): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(79,29): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(79,29): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(79,29): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(82,29): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(82,29): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(82,29): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(82,29): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(82,29): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(85,31): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(85,31): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(85,31): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(85,31): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(85,31): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(95,28): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(95,28): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(95,28): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(95,28): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(95,28): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(98,29): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(98,29): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(98,29): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(98,29): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(98,29): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(101,29): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(101,29): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(101,29): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(101,29): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(101,29): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(104,31): warning C4244: 'return': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(104,31): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(104,31): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(104,31): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(104,31): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(190,13): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(190,13): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(190,13): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(190,13): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(190,13): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(191,13): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(191,13): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(191,13): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(191,13): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(191,13): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,108): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,108): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,108): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,108): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,108): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,84): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,84): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,84): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,84): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(204,84): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,113): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,113): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,113): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,113): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,113): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,89): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,89): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,89): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,89): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(214,89): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,102): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,102): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,102): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,102): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,102): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,78): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,78): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,78): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,78): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(226,78): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(234,13): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(234,13): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(234,13): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(234,13): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(234,13): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(235,13): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(235,13): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(235,13): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(235,13): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(235,13): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,108): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,108): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,108): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,108): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,108): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,84): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,84): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,84): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,84): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(249,84): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,113): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,113): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,113): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,113): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,113): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,89): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,89): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,89): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,89): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(259,89): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,102): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,102): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,102): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,102): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,102): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,78): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,78): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,78): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,78): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(271,78): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,87): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,87): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,87): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,87): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,87): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,63): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,63): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,63): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,63): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(284,63): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(308,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(308,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,59): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,59): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,59): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,59): warning C4244:             T=unsigned int
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,59): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,39): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,39): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,39): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,39): warning C4244:             T=unsigned int
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Main.cpp(14,39): warning C4244:         ]
+  MainMenu.cpp
+  Mapa.cpp
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(130,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(130,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(139,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(139,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(146,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(146,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(151,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(151,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(158,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Mapa.cpp(158,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Municion.cpp
+  Player.cpp
+  Scene.cpp
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,90): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,90): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,90): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,90): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,90): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,65): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,65): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,65): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,65): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(28,65): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,93): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,93): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,93): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,93): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,93): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,68): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,68): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,68): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,68): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(29,68): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,152): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,152): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,152): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,152): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,152): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,127): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,127): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,127): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,127): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(33,127): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,106): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,106): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,106): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,106): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,106): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,81): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,81): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,81): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,81): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(56,81): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,69): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,69): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,69): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,69): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,69): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,44): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,44): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,44): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,44): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(58,44): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,104): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,104): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,104): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,104): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,104): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,79): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,79): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,79): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,79): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(89,79): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,91): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,91): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,91): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,91): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,91): warning C4244:         ]
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,66): warning C4244: 'argument': conversion from 'const T' to 'int', possible loss of data
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,66): warning C4244:         with
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,66): warning C4244:         [
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,66): warning C4244:             T=float
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\Scene.cpp(106,66): warning C4244:         ]
+  Vida.cpp
+  Generating Code...
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(107,1): warning C4715: 'GhostManager::GetPosX': not all control paths return a value
+C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\GhostManager.cpp(88,1): warning C4715: 'GhostManager::GetPosY': not all control paths return a value
+  Space-Pac-Man.vcxproj -> C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\x64\Debug\Space-Pac-Man.exe
+  C:\Users\Pedro\OneDrive\Escritorio\Space-Pac-Man\packages\SFML-cpp.redist.2.5.1.1\build\native\bin\x64\Debug\openal32.dll
+  1 archivo(s) copiado(s)
