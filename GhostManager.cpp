@@ -310,57 +310,65 @@ void GhostManager::update()
 			ghost->setScared(false);
 			continue;
 		}
+		if (ghost->getValidMove()) {
+			
+			if (ghost->getScared()) {
+				// Comportamiento asustado
+				if (Frightened(*ghost)) {
+					ghost->setValidMove(false);
+					ghost->update();
+				}
+			}
+			else {
+				// Comportamiento normal (Scatter o Chase)
+				bool moved = false;
 
-		if (ghost->getScared()) {
-			// Comportamiento asustado
-			if (Frightened(*ghost)) {
-				ghost->update();
+				if (ghost == &_red) {
+					if (Scatter(*ghost, 3, 18) && tick <= 60*7) {
+						moved = true;
+					}
+					else if (Chase(*ghost, Py, Px) && tick > 60*7) {
+						moved = true;
+					}
+				}
+				else if (ghost == &_pink) {
+					sf::Vector2i pinkTarget = targetPink(Pest, Py, Px);
+					if (tick > 60) {
+						if (Scatter(*ghost, 3, 4) && tick <= 60 * 9){
+							moved = true;
+						}
+						else if (Chase(*ghost, pinkTarget.y, pinkTarget.x) && tick > 60 * 9) {
+							moved = true;
+						}
+					}
+				}
+				else if (ghost == &_blue) {
+					if (tick > (60*4)+30 && Scatter(*ghost, 22, 18)) {
+						moved = true;
+					}
+				}
+				else if (ghost == &_orange) {
+					if (tick > 60*5 && Scatter(*ghost, 22, 2)) {
+						moved = true;
+					}
+				}
+
+				if (moved) {
+					ghost->setValidMove(false);
+					ghost->update();
+				}
 			}
 		}
 		else {
-			// Comportamiento normal (Scatter o Chase)
-			bool moved = false;
-
-			if (ghost == &_red) {
-				if (Scatter(*ghost, 3, 18) && tick <= 60) {
-					moved = true;
-				}
-				else if (Chase(*ghost, Py, Px) && tick > 60) {
-					moved = true;
-				}
-			}
-			else if (ghost == &_pink) {
-				sf::Vector2i pinkTarget = targetPink(Pest, Py, Px);
-				if (tick > 1) {
-					if (Scatter(*ghost, 3, 4) && tick <= 60) {
-						moved = true;
-					}
-					else if (Chase(*ghost, pinkTarget.y, pinkTarget.x) && tick > 60) {
-						moved = true;
-					}
-				}
-			}
-			else if (ghost == &_blue) {
-				if (tick > 15 && Scatter(*ghost, 22, 18)) {
-					moved = true;
-				}
-			}
-			else if (ghost == &_orange) {
-				if (tick > 17 && Scatter(*ghost, 22, 2)) {
-					moved = true;
-				}
-			}
-
-			if (moved) {
-				ghost->update();
-			}
+			//ghost->setEstado(ghost->getEstAnt());
+			ghost->update();
 		}
 	}
 
 	// Reiniciar el tick si es necesario
-	if (tick > 180) {  // Puedes ajustar este valor según tus necesidades
-		tick = 0;
-	}
+	//if (tick > 60*10) {  // Puedes ajustar este valor según tus necesidades
+	//	tick = 0;
+	//}
 }
 
 	

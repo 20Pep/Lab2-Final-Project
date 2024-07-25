@@ -5,31 +5,31 @@
 bool Collision::CheckCollision(int state, Mapa& _mapa, int posy, int posx)
 {
    
-      int CurrentPosY = posy / 8; //calcula por cada celda de 8 de logicMap
-      int CurrentPosX = posx / 8;
+      int CurrentPosY = posy / 32; //calcula por cada celda de 8 de logicMap
+      int CurrentPosX = posx / 32;
 
 
     switch (state)
     {
     case 1:
-        if (_mapa.getLogicMap(CurrentPosY -1, CurrentPosX) != 1) { //los -1 y +4 los deje asi pq asi me funco, habria que verlo mejor
+        if (_mapa.getMapa(CurrentPosY -1, CurrentPosX) != 1) { //los -1 y +4 los deje asi pq asi me funco, habria que verlo mejor
             return true;
         }
         
         break;
     case 2:
-        if (_mapa.getLogicMap(CurrentPosY +4, CurrentPosX) != 1) {
+        if (_mapa.getMapa(CurrentPosY +1, CurrentPosX) != 1) {
            return true;
         }
         
         break;
     case 3:
-        if (_mapa.getLogicMap(CurrentPosY, CurrentPosX -1) != 1) {
+        if (_mapa.getMapa(CurrentPosY, CurrentPosX -1) != 1) {
             return true;
         }
         break;
     case 4:
-        if (_mapa.getLogicMap(CurrentPosY, CurrentPosX +4) != 1) {
+        if (_mapa.getMapa(CurrentPosY, CurrentPosX +1) != 1) {
             return true;
         }
         break;
@@ -65,7 +65,7 @@ void Collision::ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX)
     if (_mapa.getMapa(CurrentPosY, CurrentPosX) == 2) {
         contFood++;//cuenta cuanto se comio el pacman
         maxim = contFood;
-        if (maxim >= 14) {
+        if (maxim >= 151) {
            // pass = false;
             std::cout << "Entre" << std::endl;
             origen = false;

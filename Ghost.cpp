@@ -10,6 +10,7 @@ Ghost::Ghost(int y, int x, int color, int tam)
 	Scared = false;
 	_homeY = y;
 	_homeX = x;
+	tickValidMove = 0;
 
 }
 
@@ -26,7 +27,7 @@ void Ghost::setAll(int color)
 	isAlive = true;
 	Scared = false;
 	Colour = color;
-
+	tickValidMove = 0;
 }
 
 int Ghost::getHomeY()
@@ -42,6 +43,16 @@ int Ghost::getHomeX()
 void Ghost::setColor(int color)
 {
 	Colour = color;
+}
+
+void Ghost::setValidMove(bool valid)
+{
+	isValidMove = valid;
+}
+
+bool Ghost::getValidMove()
+{
+	return isValidMove;
 }
 
 void Ghost::setIsAlive(bool live)
@@ -101,24 +112,34 @@ int Ghost::EstadoActual(int e)
 
 void Ghost::update()
 {
+
+	if (tickValidMove >= 32) {
+		isValidMove = true;
+		tickValidMove = 0;
+	}
 	
+	tickValidMove++;
+
 	switch (_estado)
 	{
 	case 1:
-		_vel = { 0,-32 };
+		_vel = { 0,-1 };
 		break;
 	case 2:
-		_vel = { 0,32 };
+		_vel = { 0,1 };
 		break;
 	case 3:
-		_vel = { -32,0 };
+		_vel = { -1,0 };
 		break;
 	case 4:
-		_vel = { 32,0 };
+		_vel = { 1,0 };
 		break;
 	}
 
-	move(_vel);
+	if (tickValidMove <= 32) {
+		move(_vel);
+	}
+	
 
 }
 

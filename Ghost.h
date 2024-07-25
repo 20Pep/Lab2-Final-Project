@@ -15,6 +15,8 @@ protected:
 	int Colour;
 	bool isAlive;
 	bool Scared;
+	bool isValidMove;
+	int tickValidMove;
 public:
 	Ghost(int y, int x, int color, int tam);
 	Ghost();
@@ -25,6 +27,8 @@ public:
 	void setIsAlive(bool live);
 	void setScared(bool is);
 	void setColor(int color);
+	void setValidMove(bool valid);
+	bool getValidMove();
 	int getHomeY();
 	int getHomeX();
 	bool getIsAlive();

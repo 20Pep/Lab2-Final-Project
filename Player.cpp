@@ -16,6 +16,7 @@ int Player::actualState()
 	
 	if (_state == 0) {
 		_tickmove = 0;
+		validMove = false;
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
 			return _state = 1;
 		}
@@ -34,9 +35,10 @@ int Player::actualState()
 
 void Player::update()
 {
-	if (_tickmove >= 4){ // ahora le damos utilidad a los tickmove, sirve para que haga un movimiento de una celda de 32, solo q ahora es mas lento
+	if (_tickmove >= 32){ // ahora le damos utilidad a los tickmove, sirve para que haga un movimiento de una celda de 32, solo q ahora es mas lento
 		_state = 0;
-		_tickmove = 0; // Corrección: debe ser una asignación, no una comparación
+		_tickmove = 0;// Corrección: debe ser una asignación, no una comparación
+		validMove = true;
 	}
 	_tickmove++;
 
@@ -47,16 +49,16 @@ void Player::update()
 			_vel = { 0,0 };
 			break;
 		case 1:
-			_vel = { 0,-8 };
+			_vel = { 0,-1 };
 			break;
 		case 2:
-			_vel = { 0,8 };
+			_vel = { 0,1 };
 			break;
 		case 3:
-			_vel = { -8,0 };
+			_vel = { -1,0 };
 			break;
 		case 4:
-			_vel = { 8,0 };
+			_vel = { 1,0 };
 			break;
 		default:
 			break;
@@ -69,18 +71,19 @@ void Player::update()
 			_vel = { 0,0 };
 			break;
 		case 3:
-			_vel = { -8,0 };
+			_vel = { -1,0 };
 			break;
 		case 4:
-			_vel = { 8,0 };
+			_vel = { 1,0 };
 			break;
 		default:
 			break;
 		}
 	}
 
-	if (_tickmove <= 4) {
+	if (_tickmove <= 32) {
 		move(_vel);
+		
 	}
 	else {
 		_vel = { 0, 0 };
@@ -108,6 +111,11 @@ int Player::getEstado()
 	return _state;
 }
 
+int Player::getAntEstado()
+{
+	return _antEstado;
+}
+
 
 int Player::setEstado(int state)
 {
@@ -117,6 +125,11 @@ int Player::setEstado(int state)
 int Player::getTickMove()
 {
 	return _tickmove;
+}
+
+bool Player::getValidMove()
+{
+	return validMove;
 }
 
 int Player::setTickMove(int tick)

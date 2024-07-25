@@ -25,7 +25,7 @@ private:
 	bool isPlaying;
 	int pause;
 	bool nombre;
-	int _tickmoveG;
+   //	int _tickmoveG;
 	float cont;
 	
 public:

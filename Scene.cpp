@@ -8,7 +8,7 @@ Scene::Scene()
 	_vidas.setVidas(3);
 	
 	pause = 0;
-	_tickmoveG = 0;
+	//_tickmoveG = 0;
 	 nombre = false;
 	 isPlaying = true;
 	 cont = 0;
@@ -51,20 +51,21 @@ void Scene::update()
 			else {
 				_manager.setScared(false);
 			}
-
-			int estado = _player.actualState();
-			bool canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
-
-			_manager.setPacman(_player.getPosition().y, _player.getPosition().x);
-			if (_tickmoveG == 25) {
-				_manager.update();
-				_tickmoveG = 0;
+			bool canMove;
+			if (_player.getValidMove()) {
+				int estado = _player.actualState();
+				canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
 			}
-			_tickmoveG++;
+			else {
+				canMove = true;
+			}
+			_manager.setPacman(_player.getPosition().y, _player.getPosition().x);
+			
+			_manager.update();
 
 			if (canMove) {
 				_player.update();
-
+				
 			}
 			else {
 				_player.setEstado(0); // Resetea el estado si no puede moverse
@@ -143,7 +144,7 @@ void Scene::setScene()
 	_player.setPosition(352, 480);
 	_manager.setAll();
 	//_player.setTickMove(0);
-	_tickmoveG = 0;
+	//_tickmoveG = 0;
 }
 
 void Scene::ResetAll()
@@ -151,7 +152,7 @@ void Scene::ResetAll()
 	_player.setPosition(352, 480);
 	//_player.setTickMove(0);
 	_vidas.setVidas(3);
-	_tickmoveG = 0;
+	//_tickmoveG = 0;
 	nombre = false;
 	_manager.setAll();
 	_mapa.initialMap();

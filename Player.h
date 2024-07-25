@@ -15,6 +15,8 @@ private:
 	bool movX = true;
 	sf::Sprite sp;
 	int _tickTeclaZ;
+	bool validMove;
+	int _antEstado;
 
 public:
 	Player();
@@ -22,8 +24,10 @@ public:
 	void update();
 	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;
 	int getEstado();
+	int getAntEstado();
 	int setEstado(int state);
 	int getTickMove();
+	bool getValidMove();
 	int setTickMove(int tick);
 	bool getHunter();
 	void setHunter(bool state);
