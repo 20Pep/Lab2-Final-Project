@@ -1,6 +1,6 @@
 #include "MainMenu.h"
 
-MainMenu::MainMenu(float width, float height)
+MainMenu::MainMenu(unsigned int width, unsigned int heightt)
 {
 	if (!font.loadFromFile("Recursos/images/font.ttf")) {
 		// Handle error

@@ -17,16 +17,20 @@ protected:
 	bool Scared;
 	bool isValidMove;
 	int tickValidMove;
+	sf::Sprite sp;
+	sf::Texture textu;
 public:
-	Ghost(int y, int x, int color, int tam);
+	Ghost(int y, int x, int coloor, int tam);
 	Ghost();
 
+	sf::FloatRect getBounds();
+	void setColor(int colour = 5);
 	void setAll(int color);
 	void setEstAnt(int e);
 	void setEstado(int e);
 	void setIsAlive(bool live);
 	void setScared(bool is);
-	void setColor(int color);
+	/*void setColor(int color);*/
 	void setValidMove(bool valid);
 	bool getValidMove();
 	int getHomeY();

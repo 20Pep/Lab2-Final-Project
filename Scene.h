@@ -27,6 +27,8 @@ private:
 	bool nombre;
    //	int _tickmoveG;
 	float cont;
+	bool banderaScared;
+	int ticktest;
 	
 public:
 	Scene();

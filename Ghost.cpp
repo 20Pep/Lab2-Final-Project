@@ -1,9 +1,9 @@
 #include "Ghost.h"
 
-Ghost::Ghost(int y, int x, int color, int tam)
+Ghost::Ghost(int y, int x, int coloor, int tam)
 {
 	setPosition(x, y);
-	Colour = color;
+	Colour = coloor;
 	_head.setRadius(tam);
 	_EstadoAnt ;
 	isAlive = true;
@@ -12,12 +12,50 @@ Ghost::Ghost(int y, int x, int color, int tam)
 	_homeX = x;
 	tickValidMove = 0;
 
+	
+
+	textu.loadFromFile("Recursos/images/Ghost16.png");
+	sp.setTexture(textu);
+	setColor(Colour);
+	sp.setTextureRect(sf::IntRect(4 * 0, 0, 29, 32));
+
 }
 
 Ghost::Ghost()
 {
 }
 
+
+
+
+sf::FloatRect Ghost::getBounds()
+{
+	return getTransform().transformRect(sp.getGlobalBounds());
+}
+
+void Ghost::setColor(int Colour)
+{
+	sf::Color color;
+	switch (Colour)
+	{
+	case 1:
+		color = color.Red;
+		break;
+	case 2:
+		color = color.Magenta;
+		break;
+	case 3:
+		color = color.Cyan;
+		break;
+	case 4:
+		color = color.Yellow;
+		break;
+	case 5:
+		color = color.Blue;
+	}
+
+	sp.setColor(color);
+}
 
 void Ghost::setAll(int color)
 {
@@ -26,8 +64,10 @@ void Ghost::setAll(int color)
 	_EstadoAnt = 0;
 	isAlive = true;
 	Scared = false;
-	Colour = color;
+	setColor(color);
 	tickValidMove = 0;
+	isValidMove = true;
+	_vel = { 0, 0 };
 }
 
 int Ghost::getHomeY()
@@ -40,10 +80,10 @@ int Ghost::getHomeX()
 	return _homeY;
 }
 
-void Ghost::setColor(int color)
-{
-	Colour = color;
-}
+//void Ghost::setColor(int color)
+//{
+//	Colour = color;
+//}
 
 void Ghost::setValidMove(bool valid)
 {
@@ -112,31 +152,32 @@ int Ghost::EstadoActual(int e)
 
 void Ghost::update()
 {
+	tickValidMove++;
 
-	if (tickValidMove >= 32) {
+	if (tickValidMove >= 16) {
 		isValidMove = true;
 		tickValidMove = 0;
 	}
 	
-	tickValidMove++;
+	
 
 	switch (_estado)
 	{
 	case 1:
-		_vel = { 0,-1 };
+		_vel = { 0,-2};
 		break;
 	case 2:
-		_vel = { 0,1 };
+		_vel = { 0,2 };
 		break;
 	case 3:
-		_vel = { -1,0 };
+		_vel = { -2,0 };
 		break;
 	case 4:
-		_vel = { 1,0 };
+		_vel = { 2,0 };
 		break;
 	}
 
-	if (tickValidMove <= 32) {
+	if (tickValidMove < 16) {
 		move(_vel);
 	}
 	
@@ -145,32 +186,7 @@ void Ghost::update()
 
 void Ghost::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	sf::Color color;
-	switch (Colour)
-	{
-	case 1:
-		color = color.Red;
-		break;
-	case 2:
-		color = color.Magenta;
-		break;
-	case 3:
-		color = color.Cyan;
-		break;
-	case 4:
-		color = color.Yellow;
-		break;
-	case 5:
-		color = color.Blue;
-	}
-
-	sf::Sprite sp;
-	sf::Texture textu;
-
-	textu.loadFromFile("Recursos/images/Ghost16.png");
-	sp.setTexture(textu);
-	sp.setColor(color);
-	sp.setTextureRect(sf::IntRect(4 * 0, 0, 29, 32));
+	
 	states.transform *= getTransform();
 	target.draw(sp, states);
 }

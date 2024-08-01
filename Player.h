@@ -6,7 +6,7 @@ class Player : public sf::Drawable, public sf::Transformable
 {
 private:
 
-	sf::CircleShape _body;
+
 	int _tickmove;
 	int _state;
 	sf::Vector2f _vel;
@@ -14,12 +14,18 @@ private:
 	bool disparo = false;
 	bool movX = true;
 	sf::Sprite sp;
+	sf::Texture textu;
 	int _tickTeclaZ;
 	bool validMove;
 	int _antEstado;
+	int _lastkey;
 
 public:
 	Player();
+	sf::FloatRect returnBounds();
+	void ResetPlayer();
+	void handleInput();
+	void setLastkey(int key);
 	int actualState();
 	void update();
 	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;

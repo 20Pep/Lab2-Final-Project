@@ -22,20 +22,25 @@ private:
 	int Py;
 	int Px;
 	int Pest;
-	int cazado;
 	
+	
+	bool homePink;
+	bool homeBlue;
+	bool homeOrange;
+
 public:
 	
 	GhostManager();
 	void setAll();
-	void setTick(int tick);
+	void setTick(int t);
 	void setScared(bool is);
 	void setPacman(int y, int x);
 	void setPest(int estado);
 	void setPos(int y, int x, int n);
-	int GetPosY(int n);
-	int GetPosX(int n);
-	int getCazado();
+	float GetPosY(int n);
+	float GetPosX(int n);
+	sf::FloatRect getBounds(int x);
+	void exitHome();
 	void returnHome(int ghost);
 	//bool pathHome(Ghost& _ghost, int Ygoal, int Xgoal);
 	sf::Vector2i targetPink(int estado, int y, int x);

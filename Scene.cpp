@@ -12,25 +12,23 @@ Scene::Scene()
 	 nombre = false;
 	 isPlaying = true;
 	 cont = 0;
+	 banderaScared = false;
+	 ticktest = 0;
 }
 
 void Scene::update() 
 {	
 	if (pause == 0) {
+		ticktest++;
+		if (ticktest % 60 == 0) {
+			std::cout << ticktest / 60 << "  ";
+		}
 		if (_collision.getJefe() != false) { //Escena 1
 			_player.SoloX(_collision.getJefe());
-
-			if (_player.getEstado() != 0) {
-				_manager.setPest(_player.getEstado());
-			}
-
-
-			_collision.ObjCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
-			_collision.PortalCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
-
+			
 			int IsAlive[4];
 			for (int i = 1; i <= 4; i++) {
-				IsAlive[i - 1] = _collision.GhostAndPacman(_mapa, _manager.GetPosX(i), _manager.GetPosY(i), _player, _player.getPosition().y, _player.getPosition().x, i);
+				IsAlive[i - 1] = _collision.GhostAndPacman(_mapa, _manager.GetPosX(i), _manager.GetPosY(i), _player, _player.getPosition().y, _player.getPosition().x, i, _manager.getBounds(i));
 				if (IsAlive[i - 1] == 0) {
 					_vidas.setVidas(_vidas.getVidas() - 1);
 					_mapa.setMapa(0, _vidas.getVidas() + 1, 0);
@@ -44,17 +42,31 @@ void Scene::update()
 				}
 			}
 
+			if (_player.getEstado() != 0) {
+				_manager.setPest(_player.getEstado());
+			}
 
-			if (_player.getHunter()) {
-				_manager.setScared(true);
+
+			_collision.ObjCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
+			_collision.PortalCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
+			if (_player.getHunter()) { // fantasmas asustados
+				if (banderaScared == false) { 
+					_manager.setScared(true);
+					banderaScared = true;
+				}
 			}
 			else {
 				_manager.setScared(false);
+				banderaScared = false;
 			}
 			bool canMove;
+			_player.handleInput();
 			if (_player.getValidMove()) {
 				int estado = _player.actualState();
 				canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
+				/*if (!canMove) {
+					estado = _player.getAntEstado();
+				}*/
 			}
 			else {
 				canMove = true;
@@ -70,6 +82,8 @@ void Scene::update()
 			else {
 				_player.setEstado(0); // Resetea el estado si no puede moverse
 			}
+
+			
 
 		}
 		else { // Escena 2
@@ -142,6 +156,7 @@ void Scene::scene2()
 void Scene::setScene()
 {
 	_player.setPosition(352, 480);
+	_player.ResetPlayer();
 	_manager.setAll();
 	//_player.setTickMove(0);
 	//_tickmoveG = 0;
@@ -150,6 +165,7 @@ void Scene::setScene()
 void Scene::ResetAll()
 {
 	_player.setPosition(352, 480);
+	_player.ResetPlayer();
 	//_player.setTickMove(0);
 	_vidas.setVidas(3);
 	//_tickmoveG = 0;
@@ -157,6 +173,7 @@ void Scene::ResetAll()
 	_manager.setAll();
 	_mapa.initialMap();
 	_collision.setAll();
+	banderaScared = false;
 
 }
 

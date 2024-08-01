@@ -13,7 +13,7 @@ private:
 
 public:
     // public means that it can be accessed outside the class.
-    MainMenu(float width, float height);
+    MainMenu(unsigned int width, unsigned int height);
 
     void draw(RenderWindow& window);
     void MoveUp();

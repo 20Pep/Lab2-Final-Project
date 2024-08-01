@@ -25,6 +25,7 @@ protected:
 
 public:
 	Boss();
+	sf::FloatRect returnBounds();
 	void update();
 	bool CheckCollision(const Balas& bala);
 	void updateHitbox();

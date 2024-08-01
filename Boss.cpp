@@ -23,6 +23,8 @@ Boss::Boss()
     updateHitbox();
 }
 
+
+
 void Boss::update()
 {
     const float LEFT_BOUNDARY = 0;

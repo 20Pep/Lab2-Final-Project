@@ -3,6 +3,11 @@
 GhostManager::GhostManager() : _red(352, 352, 1, 16), _pink(416, 352, 2, 16), _blue(416, 320, 3, 16), _orange(416,384, 4, 16) {
 	tick = 0;
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
+	homeBlue = true;
+	homeOrange = true;
+	homePink = true; //ver este error
+	Pest = 0;
+
 }
 
 void GhostManager::setAll()
@@ -11,13 +16,16 @@ void GhostManager::setAll()
 	_pink.setAll(2);
 	_blue.setAll(3);
 	_orange.setAll(4);
+	homeBlue = true; 
+	homeOrange = true;
+	homePink = true; //ver este error
 	tick = 0;
-	Scared = false;
+
 }
 
-void GhostManager::setTick(int tick)
+void GhostManager::setTick(int t)
 {
-	tick = 0;
+	tick = t ;
 }
 
 void GhostManager::setScared(bool is)
@@ -68,7 +76,7 @@ void GhostManager::setPos(int y, int x, int n)
 	}
 }
 
-int GhostManager::GetPosY(int n)
+float GhostManager::GetPosY(int n)
 {
 	switch (n)
 	{
@@ -87,7 +95,7 @@ int GhostManager::GetPosY(int n)
 	}
 }
 
-int GhostManager::GetPosX(int n)
+float GhostManager::GetPosX(int n)
 {
 	switch (n)
 	{
@@ -106,9 +114,40 @@ int GhostManager::GetPosX(int n)
 	}
 }
 
-int GhostManager::getCazado()
+sf::FloatRect GhostManager::getBounds(int x)
 {
-	return cazado;
+	switch (x)
+	{
+	case 1:
+		return _red.getBounds();
+		break;
+	case 2:
+		return _pink.getBounds();
+		break;
+	case 3:
+		return _blue.getBounds();
+		break;
+	case 4:
+		return _orange.getBounds();
+		break;
+	};
+}
+
+
+void GhostManager::exitHome()
+{
+	
+		if (tick >= (60 * 1)) {
+			homePink = false;
+		}
+		if (tick >= (60 * 7)) {
+			homeBlue = false;
+		}
+		if (tick >= (60 * 9)) {
+			homeOrange = false;
+		}
+
+
 }
 
 void GhostManager::returnHome(int ghost)
@@ -231,8 +270,8 @@ bool GhostManager::Scatter (Ghost& _ghost, int Ygoal, int Xgoal)
 
 bool GhostManager::Chase(Ghost& _ghost, int pacmanY, int pacmanX)
 {
-	int startY = _ghost.getPosition().y / 32;
-	int startX = _ghost.getPosition().x / 32;
+	float startY = _ghost.getPosition().y / 32;
+	float startX = _ghost.getPosition().x / 32;
 	_AStar.setStart(startY, startX);
 	_AStar.setGoal(pacmanY, pacmanX);
 
@@ -295,19 +334,21 @@ void GhostManager::update()
 {
 	tick++;
 
+	exitHome();
+
 	// Array de punteros a fantasmas
 	Ghost* ghosts[] = { &_red, &_pink, &_blue, &_orange };
+
+	/*if (tick % 120 == 0) {
+		std::cout << tick <<"  ";
+	}*/
 
 	for (int i = 0; i < 4; ++i) {
 		Ghost* ghost = ghosts[i];
 
 		if (!ghost->getIsAlive()) {
 			// Si el fantasma no está vivo, lo devolvemos a su posición inicial
-			ghost->setEstAnt(0);
-			ghost->setEstado(0);
-			ghost->setPosition(ghost->getHomeX(), ghost->getHomeY());
-			ghost->setIsAlive(true);
-			ghost->setScared(false);
+			ghost->setAll(i + 1);
 			continue;
 		}
 		if (ghost->getValidMove()) {
@@ -324,31 +365,31 @@ void GhostManager::update()
 				bool moved = false;
 
 				if (ghost == &_red) {
-					if (Scatter(*ghost, 3, 18) && tick <= 60*7) {
+					if (Scatter(*ghost, 3, 18) && tick <= 60*12) {
 						moved = true;
 					}
-					else if (Chase(*ghost, Py, Px) && tick > 60*7) {
+					else if (Chase(*ghost, Py, Px) && tick > 60*12) {
 						moved = true;
 					}
 				}
 				else if (ghost == &_pink) {
 					sf::Vector2i pinkTarget = targetPink(Pest, Py, Px);
-					if (tick > 60) {
-						if (Scatter(*ghost, 3, 4) && tick <= 60 * 9){
+					if (homePink == false) {
+						if (Scatter(*ghost, 3, 4) && tick <= 60 * 12){
 							moved = true;
 						}
-						else if (Chase(*ghost, pinkTarget.y, pinkTarget.x) && tick > 60 * 9) {
+						else if (Chase(*ghost, pinkTarget.y, pinkTarget.x) && tick > 60 * 12) {
 							moved = true;
 						}
 					}
 				}
 				else if (ghost == &_blue) {
-					if (tick > (60*4)+30 && Scatter(*ghost, 22, 18)) {
+					if (homeBlue == false && Scatter(*ghost, 22, 18)) {
 						moved = true;
 					}
 				}
 				else if (ghost == &_orange) {
-					if (tick > 60*5 && Scatter(*ghost, 22, 2)) {
+					if (homeOrange == false && Scatter(*ghost, 22, 2)) {
 						moved = true;
 					}
 				}
@@ -366,9 +407,11 @@ void GhostManager::update()
 	}
 
 	// Reiniciar el tick si es necesario
-	//if (tick > 60*10) {  // Puedes ajustar este valor según tus necesidades
-	//	tick = 0;
-	//}
+	if (tick > 60*34) {  // Puedes ajustar este valor según tus necesidades
+		tick = 0;
+	}
+
+	
 }
 
 	

@@ -3,12 +3,56 @@
 
 Player::Player()
 {
-	_body.setFillColor(sf::Color::Yellow);
-	_body.setRadius(16);
+	
 	_state = 0;
 	_tickmove = 0;
 	hunter = false;
 	_tickTeclaZ = 0;
+	validMove = false;
+	_antEstado = 0;
+	_lastkey = 0;
+
+	textu.loadFromFile("Recursos/images/Pacman16.png");
+	sp.setTexture(textu);
+	sp.setTextureRect(sf::IntRect(32, 0, 32, 32));
+}
+
+sf::FloatRect Player::returnBounds()
+{	
+	
+	return getTransform().transformRect(sp.getGlobalBounds());
+}
+
+void Player::ResetPlayer()
+{
+	_state = 0;
+	_tickmove = 0;
+	hunter = false;
+	_tickTeclaZ = 0;
+	_lastkey = 0;
+	validMove = false;
+	
+}
+
+void Player::handleInput()
+{
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+        _lastkey = 1;
+    }
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+        _lastkey = 2;
+    }
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+        _lastkey = 3;
+    }
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+        _lastkey = 4;
+    }
+}
+
+void Player::setLastkey(int key)
+{
+	_lastkey = key;
 }
 
 int Player::actualState()
@@ -17,16 +61,16 @@ int Player::actualState()
 	if (_state == 0) {
 		_tickmove = 0;
 		validMove = false;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		if (_lastkey == 1) {
 			return _state = 1;
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		if (_lastkey == 2) {
 			return _state = 2;
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		if (_lastkey == 3) {
 			return _state = 3;
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		if (_lastkey == 4) {
 			return _state = 4;
 		}
 	}
@@ -35,10 +79,11 @@ int Player::actualState()
 
 void Player::update()
 {
-	if (_tickmove >= 32){ // ahora le damos utilidad a los tickmove, sirve para que haga un movimiento de una celda de 32, solo q ahora es mas lento
+	if (_tickmove >= 16){ // ahora le damos utilidad a los tickmove, sirve para que haga un movimiento de una celda de 32, solo q ahora es mas lento
 		_state = 0;
 		_tickmove = 0;// Corrección: debe ser una asignación, no una comparación
 		validMove = true;
+		
 	}
 	_tickmove++;
 
@@ -49,16 +94,16 @@ void Player::update()
 			_vel = { 0,0 };
 			break;
 		case 1:
-			_vel = { 0,-1 };
+			_vel = { 0,-2};
 			break;
 		case 2:
-			_vel = { 0,1 };
+			_vel = { 0,2};
 			break;
 		case 3:
-			_vel = { -1,0 };
+			_vel = { -2,0 };
 			break;
 		case 4:
-			_vel = { 1,0 };
+			_vel = { 2,0 };
 			break;
 		default:
 			break;
@@ -71,19 +116,18 @@ void Player::update()
 			_vel = { 0,0 };
 			break;
 		case 3:
-			_vel = { -1,0 };
+			_vel = { -2,0 };
 			break;
 		case 4:
-			_vel = { 1,0 };
+			_vel = { 2,0 }; 
 			break;
 		default:
 			break;
 		}
 	}
 
-	if (_tickmove <= 32) {
+	if (_tickmove <= 16) {
 		move(_vel);
-		
 	}
 	else {
 		_vel = { 0, 0 };
@@ -96,12 +140,6 @@ void Player::update()
 
 void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	sf::Sprite sp;
-	sf::Texture textu;
-
-	textu.loadFromFile("Recursos/images/Pacman16.png");
-	sp.setTexture(textu);
-	sp.setTextureRect(sf::IntRect(32,0,32,32));
 	states.transform *= getTransform();
 	target.draw(sp, states);
 }

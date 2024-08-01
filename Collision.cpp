@@ -40,14 +40,20 @@ bool Collision::CheckCollision(int state, Mapa& _mapa, int posy, int posx)
 }
 
 
-int Collision::GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, int posY, int posX, int ghost)
+int Collision::GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, int posY, int posX, int ghost, sf::FloatRect o)
 {
     bool hunter = _player.getHunter();
-    if (posx == posX && posy == posY && hunter) {
+    
+    if (_player.returnBounds().intersects(o) && hunter) {
         std::cout << "TE COMI ";
         return ghost;
     }
-    else if (posx == posX && posy == posY && !hunter)
+  /*  if (posx == posX && posy == posY && hunter) {
+        std::cout << "TE COMI ";
+        return ghost;
+    }
+*/
+    else if (_player.returnBounds().intersects(o) && !hunter)
     {
         return 0;
     }
@@ -80,13 +86,13 @@ void Collision::ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX)
         std::cout << "CAMBIO" << std::endl;
           }
     }
-    tick3++;
+    energizerTick++;
     if (_mapa.getMapa(CurrentPosY, CurrentPosX) == 3) {
         _mapa.setMapa(CurrentPosY, CurrentPosX, 0);    
         _player.setHunter(true);
-        tick3 = 0;
+        energizerTick = 0;
     }
-    else if (tick3 >= 60 * 7) {
+    else if (energizerTick >= (60 * 10)) {
         _player.setHunter(false);
     
     }
@@ -119,7 +125,7 @@ void Collision::PortalCollision(Mapa& _mapa, Player& _player, int posY, int posX
 
 void Collision::setAll()
 {
-    tick3 = 0;
+    energizerTick = 0;
     contFood = 0;
 }
 
