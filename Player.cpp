@@ -11,10 +11,11 @@ Player::Player()
 	validMove = false;
 	_antEstado = 0;
 	_lastkey = 0;
-
+	Look = 2;
 	textu.loadFromFile("Recursos/images/Pacman16.png");
 	sp.setTexture(textu);
-	sp.setTextureRect(sf::IntRect(32, 0, 32, 32));
+	sp.setTextureRect(sf::IntRect(32, (32*Look), 32, 32));
+	//hello World
 }
 
 sf::FloatRect Player::returnBounds()
@@ -87,6 +88,8 @@ void Player::update()
 	}
 	_tickmove++;
 
+	
+
 	if (SoloX(movX) == true) {
 		switch (_state)
 		{
@@ -95,15 +98,19 @@ void Player::update()
 			break;
 		case 1:
 			_vel = { 0,-2};
+			Look = 1;
 			break;
 		case 2:
 			_vel = { 0,2};
+			Look = 3;
 			break;
 		case 3:
 			_vel = { -2,0 };
+			Look = 2;
 			break;
 		case 4:
 			_vel = { 2,0 };
+			Look = 0;
 			break;
 		default:
 			break;
@@ -133,15 +140,9 @@ void Player::update()
 		_vel = { 0, 0 };
 		move(_vel);
 	}
-
-}
-
-
-
-void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
-{
-	states.transform *= getTransform();
-	target.draw(sp, states);
+	textu.loadFromFile("Recursos/images/Pacman16.png");
+	sp.setTexture(textu);
+	sp.setTextureRect(sf::IntRect(32, (32 * Look), 32, 32));
 }
 
 int Player::getEstado()
@@ -217,4 +218,11 @@ bool Player::SoloX(bool posx)
 		return false;
 	}
 
+}
+
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+	
+	states.transform *= getTransform();
+	target.draw(sp, states);
 }

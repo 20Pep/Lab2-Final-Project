@@ -19,6 +19,7 @@ private:
 	bool validMove;
 	int _antEstado;
 	int _lastkey;
+	int Look;
 
 public:
 	Player();
@@ -28,7 +29,6 @@ public:
 	void setLastkey(int key);
 	int actualState();
 	void update();
-	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;
 	int getEstado();
 	int getAntEstado();
 	int setEstado(int state);
@@ -39,5 +39,6 @@ public:
 	void setHunter(bool state);
 	bool Shoot();
 	bool SoloX(bool posx);
+	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;
 };
 
