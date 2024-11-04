@@ -25,7 +25,6 @@ private:
 	bool isPlaying;
 	int pause;
 	bool nombre;
-   //	int _tickmoveG;
 	float cont;
 	bool banderaScared;
 	int ticktest;

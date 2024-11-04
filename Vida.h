@@ -8,7 +8,5 @@ private:
 public:
 	int getVidas();
 	void setVidas(int vidas);
-	void setScene(Player& _player, Ghost& _ghost);
-	void closeScene();
 };
 

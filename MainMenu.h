@@ -12,7 +12,6 @@ private:
     Text Title;
 
 public:
-    // public means that it can be accessed outside the class.
     MainMenu(unsigned int width, unsigned int height);
 
     void draw(RenderWindow& window);
@@ -22,7 +21,5 @@ public:
     int MainMenuPressed() { 
         return MainMenuSelected;
     }
-
-    //~MainMenu();
 
 };

@@ -21,12 +21,9 @@ Ghost::Ghost(int y, int x, int coloor, int tam)
 
 }
 
-Ghost::Ghost()
-{
+Ghost::Ghost(){
+
 }
-
-
-
 
 sf::FloatRect Ghost::getBounds()
 {

@@ -10,6 +10,4 @@ void Vida::setVidas(int vidas)
     _vidas = vidas;
 }
 
-void Vida::closeScene()
-{
-}
+

@@ -3,7 +3,6 @@
 
 Player::Player()
 {
-	
 	_state = 0;
 	_tickmove = 0;
 	hunter = false;
@@ -15,7 +14,6 @@ Player::Player()
 	textu.loadFromFile("Recursos/images/Pacman16.png");
 	sp.setTexture(textu);
 	sp.setTextureRect(sf::IntRect(32, (32*Look), 32, 32));
-	//hello World
 }
 
 sf::FloatRect Player::returnBounds()
@@ -32,7 +30,6 @@ void Player::ResetPlayer()
 	_tickTeclaZ = 0;
 	_lastkey = 0;
 	validMove = false;
-	
 }
 
 void Player::handleInput()
