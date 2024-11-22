@@ -71,9 +71,8 @@ void Collision::ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX)
     if (_mapa.getMapa(CurrentPosY, CurrentPosX) == 2) {
         contFood++;//cuenta cuanto se comio el pacman
         maxim = contFood;
-        if (maxim >= 13) {//151
+        if (maxim >= 151) {//151
            // pass = false;
-            std::cout << "Entre" << std::endl;
             origen = false;
            _mapa.Boss();
         }
@@ -127,6 +126,7 @@ void Collision::setAll()
 {
     energizerTick = 0;
     contFood = 0;
+    origen = true;
 }
 
 int Collision::getJefe() const

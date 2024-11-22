@@ -59,15 +59,17 @@ void Scene::update()
 				_manager.setScared(false);
 				banderaScared = false;
 			}
+
 			bool canMove;
-			_player.handleInput();
-			if (_player.getValidMove()) {
-				int estado = _player.actualState();
-				canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
-				/*if (!canMove) {
-					estado = _player.getAntEstado();
-				}*/
-			}
+            _player.handleInput(_player.getPosition().y, _player.getPosition().x);
+
+            if (_player.getValidMove()) {
+            int estado = _player.actualState();
+            canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
+            if (!canMove) {
+            _player.setEstado(_player.getAntEstado());
+            }
+            }
 			else {
 				canMove = true;
 			}

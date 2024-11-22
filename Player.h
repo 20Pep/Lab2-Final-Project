@@ -1,7 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Municion.h"
-
+#include "Mapa.h"
 class Player : public sf::Drawable, public sf::Transformable
 {
 private:
@@ -20,12 +20,14 @@ private:
 	int _antEstado;
 	int _lastkey;
 	int Look;
+	Mapa _mapa;
 
 public:
 	Player();
+	bool checkCollision(int x, int y);
 	sf::FloatRect returnBounds();
 	void ResetPlayer();
-	void handleInput();
+	void handleInput(int posy, int posx);
 	void setLastkey(int key);
 	int actualState();
 	void update();

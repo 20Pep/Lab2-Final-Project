@@ -32,20 +32,44 @@ void Player::ResetPlayer()
 	validMove = false;
 }
 
-void Player::handleInput()
+bool Player::checkCollision(int x, int y)
 {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        _lastkey = 1;
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        _lastkey = 2;
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        _lastkey = 3;
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        _lastkey = 4;
-    }
+	// Assuming each cell is 32x32 pixels
+	int cellX = x / 32;
+	int cellY = y / 32;
+
+	// Check if the cell is within the map bounds
+	if (cellX < 0 || cellX >= 23 || cellY < 0 || cellY >= 25) {
+		return true; // Out of bounds, treat as collision
+	}
+
+	// Check if the cell is blocked
+	return _mapa.getMapa(cellX,cellY)== 1;
+}
+
+void Player::handleInput(int posy, int posx)
+{
+	sf::Vector2f position = getPosition();
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		if (!checkCollision(posy - 32, posx)) {
+			_lastkey = 1;
+		}
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		if (!checkCollision(posy +32, posx)) {
+			_lastkey = 2;
+		}
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		if (!checkCollision(posy , posx - 32)) {
+			_lastkey = 3;
+		}
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		if (!checkCollision(posy , posx + 32)) {
+			_lastkey = 4;
+		}
+	}
 }
 
 void Player::setLastkey(int key)
