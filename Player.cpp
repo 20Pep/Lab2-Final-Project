@@ -16,23 +16,22 @@ Player::Player()
 	sp.setTextureRect(sf::IntRect(32, (32*Look), 32, 32));
 }
 
-sf::FloatRect Player::returnBounds()
-{	
-	
-	return getTransform().transformRect(sp.getGlobalBounds());
-}
-
 void Player::ResetPlayer()
 {
+	Look = 2;
 	_state = 0;
+	_antEstado = 0;
+	_lastkey = 0;
 	_tickmove = 0;
 	hunter = false;
 	_tickTeclaZ = 0;
 	_lastkey = 0;
 	validMove = false;
+	disparo = true;
+	canShoot = false;
 }
 
-bool Player::checkCollision(int x, int y)
+bool Player::checkCollision(int x, int y) //esto deberia estar en collision.cpp
 {
 	// Assuming each cell is 32x32 pixels
 	int cellX = x / 32;
@@ -72,9 +71,21 @@ void Player::handleInput(int posy, int posx)
 	}
 }
 
-void Player::setLastkey(int key)
+void Player::handleInput2()
 {
-	_lastkey = key;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		_lastkey = 1;
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		_lastkey = 2;
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		_lastkey = 3;
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		_lastkey = 4;
+	}
+	actualState();
 }
 
 int Player::actualState()
@@ -109,9 +120,7 @@ void Player::update()
 	}
 	_tickmove++;
 
-	
-
-	if (SoloX(movX) == true) {
+	//if (SoloX(movX) == true) {
 		switch (_state)
 		{
 		case 0:
@@ -136,23 +145,23 @@ void Player::update()
 		default:
 			break;
 		}
-	}
-	else if (SoloX(movX) == false) {
-		switch (_state)
-		{
-		case 0:
-			_vel = { 0,0 };
-			break;
-		case 3:
-			_vel = { -2,0 };
-			break;
-		case 4:
-			_vel = { 2,0 }; 
-			break;
-		default:
-			break;
-		}
-	}
+	//}
+	//else if (SoloX(movX) == false) {
+	//	switch (_state)
+	//	{
+	//	case 0:
+	//		_vel = { 0,0 };
+	//		break;
+	//	case 3:
+	//		_vel = { -2,0 };
+	//		break;
+	//	case 4:
+	//		_vel = { 2,0 }; 
+	//		break;
+	//	default:
+	//		break;
+	//	}
+	//}
 
 	if (_tickmove <= 16) {
 		move(_vel);
@@ -166,6 +175,43 @@ void Player::update()
 	sp.setTextureRect(sf::IntRect(32, (32 * Look), 32, 32));
 }
 
+bool Player::Shoot()//si pulsa la tecla z dispara
+{
+	_tickTeclaZ++;
+	if (canShoot == true)
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && disparo != true) {
+			disparo = true;
+			isContactShot = false;
+			canShoot = false;
+			return true;
+		}
+		else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
+			if (_tickTeclaZ >= 30) {
+				disparo = false;
+				_tickTeclaZ = 0;
+			}
+		}
+	}
+	return false;
+}
+
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+	states.transform *= getTransform();
+	target.draw(sp, states);
+}
+
+sf::FloatRect Player::returnBounds()
+{
+	return getTransform().transformRect(sp.getGlobalBounds());
+}
+
+void Player::setLastkey(int key)
+{
+	_lastkey = key;
+}
+
 int Player::getEstado()
 {
 	return _state;
@@ -176,6 +222,13 @@ int Player::getAntEstado()
 	return _antEstado;
 }
 
+bool Player::getCanShoot(){
+	return canShoot;
+}
+
+void Player::setCanShoot(bool value) {
+	canShoot = value;
+}
 
 int Player::setEstado(int state)
 {
@@ -207,43 +260,24 @@ void Player::setHunter(bool state)
 	hunter = state;
 }
 
-bool Player::Shoot()//si pulsa la tecla z dispara
-{
-	_tickTeclaZ++;
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && disparo != true) {
-		std::cout << "Hola" << std::endl;
-		disparo = true;
-		return true;
 
-	}
-	else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
-		if (_tickTeclaZ >= 70) {
-			disparo = false;
-			_tickTeclaZ = 0;
-		}
-
-	}
-	return false;
-
+bool Player::getIsContactShot(){
+    return isContactShot;
 }
 
-bool Player::SoloX(bool posx)
-{
-	if (posx == true) {
-		movX = true;
-		return true;
-	}
-	else
-	{
-		movX = false;
-		return false;
-	}
-
+void Player::setIsContactShot(bool value) {
+    isContactShot = value;
 }
+//bool Player::SoloX(bool posx)
+//{
+//	if (posx == true) {
+//		movX = true;
+//		return true;
+//	}
+//	else
+//	{
+//		movX = false;
+//		return false;
+//	}
+//}
 
-void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
-{
-	
-	states.transform *= getTransform();
-	target.draw(sp, states);
-}

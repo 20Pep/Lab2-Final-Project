@@ -1,6 +1,7 @@
 #include "Boss.h"
 #include "iostream"
 
+//Maneja al jefe final
 
 Boss::Boss()
 {
@@ -11,25 +12,34 @@ Boss::Boss()
 	_sprite.setScale(10, 10);
 	_sprite.setPosition(0, 100);
 	
-	//std::cout << "Imprimo el dibujo" << std::endl;
-	vel = 0;
-	estado = 0;
+	
+	estado = 1;
     _tick = 0.0f;
     _sprite.setPosition(position);
-    position = sf::Vector2f(0, 100);
-    
-    _vida = 17;
+    position = sf::Vector2f(0, 100);   
+    _vida = 15;
 
     updateHitbox();
 }
 
+void Boss::resetAll()
+{
+   
+	estado = 1;
+    _tick = 0.0f;
+    _sprite.setPosition(position);
+    _sprite.setPosition(0, 100);
+    position = sf::Vector2f(0, 100);   
+    _vida = 15;
 
+    updateHitbox();
+}
 
 void Boss::update()
 {
     const float LEFT_BOUNDARY = 0;
-    const float RIGHT_BOUNDARY = 500;
-    const float SPEED = 8;
+    const float RIGHT_BOUNDARY = 452;
+    const float SPEED = 18;
 
     _tick++; // Increment the tick counter
 
@@ -52,14 +62,12 @@ void Boss::update()
         _sprite.setPosition(position);
         _tick = 0; // Reset the tick counter
     }
-
     // Update the hitbox
     updateHitbox();
 }
 
-bool Boss::CheckCollision(const Balas& bala)
+bool Boss::CheckCollision(const Balas& bala) //esto deberia estar en collision.cpp
 {
-
 	return _hitbox.intersects(bala.getGlobalBounds());
 }
 
@@ -68,14 +76,13 @@ void Boss::updateHitbox()
 	_hitbox = _sprite.getGlobalBounds();
 }
 
-void Boss::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-
+void Boss::draw(sf::RenderTarget& target, sf::RenderStates states) const 
+{
 	states.transform *= getTransform();
 	target.draw(_sprite, states);
-
 }
 
-void Boss::setvida(int vida)
+void Boss::setvida(int vida) //esto posiblemnte deberia estar en vida.cpp
 {
     _vida = vida;
 }

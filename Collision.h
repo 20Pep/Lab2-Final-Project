@@ -19,6 +19,7 @@ public:
 	
 	bool CheckCollision(int state, Mapa& _mapa, int posy, int posx);
 	int GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, int posY, int posX, int ghost, sf::FloatRect o);
+	void Scene2Bounds(Mapa& _mapa, Player& _player, int posY, int posX);
 	void ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX);
 	void PortalCollision(Mapa& _mapa, Player& _player, int posY, int posX);
 	void setAll();

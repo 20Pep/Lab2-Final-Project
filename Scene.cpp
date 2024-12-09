@@ -6,14 +6,12 @@ Scene::Scene()
 {
 	_player.setPosition(352, 480);
 	_vidas.setVidas(3);
-	
 	pause = 0;
-	//_tickmoveG = 0;
-	 nombre = false;
-	 isPlaying = true;
-	 cont = 0;
-	 banderaScared = false;
-	 ticktest = 0;
+	nombre = false;
+	isPlaying = true;
+	cont = 0;
+	banderaScared = false;
+	ticktest = 0;
 }
 
 void Scene::update() 
@@ -23,12 +21,12 @@ void Scene::update()
 		if (ticktest % 60 == 0) {
 			std::cout << ticktest / 60 << "  ";
 		}
-		if (_collision.getJefe() != false) { //Escena 1
-			_player.SoloX(_collision.getJefe());
+		if (_collision.getJefe() == true && ticktest > 60) { //Escena 1
+		//	_player.SoloX(_collision.getJefe());
 			
 			int IsAlive[4];
 			for (int i = 1; i <= 4; i++) {
-				IsAlive[i - 1] = _collision.GhostAndPacman(_mapa, _manager.GetPosX(i), _manager.GetPosY(i), _player, _player.getPosition().y, _player.getPosition().x, i, _manager.getBounds(i));
+				IsAlive[i - 1] = _collision.GhostAndPacman(_mapa, _ghostManager.GetPosX(i), _ghostManager.GetPosY(i), _player, _player.getPosition().y, _player.getPosition().x, i, _ghostManager.getBounds(i));
 				if (IsAlive[i - 1] == 0) {
 					_vidas.setVidas(_vidas.getVidas() - 1);
 					_mapa.setMapa(0, _vidas.getVidas() + 1, 0);
@@ -38,25 +36,24 @@ void Scene::update()
 					break;
 				}
 				else if (IsAlive[i - 1] > 0) { // pacman comio 
-					_manager.returnHome(i);
+					_ghostManager.returnHome(i);
 				}
 			}
 
 			if (_player.getEstado() != 0) {
-				_manager.setPest(_player.getEstado());
+				_ghostManager.setPest(_player.getEstado());
 			}
-
 
 			_collision.ObjCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
 			_collision.PortalCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
 			if (_player.getHunter()) { // fantasmas asustados
 				if (banderaScared == false) { 
-					_manager.setScared(true);
+					_ghostManager.setScared(true);
 					banderaScared = true;
 				}
 			}
 			else {
-				_manager.setScared(false);
+				_ghostManager.setScared(false);
 				banderaScared = false;
 			}
 
@@ -68,115 +65,121 @@ void Scene::update()
             canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
             if (!canMove) {
             _player.setEstado(_player.getAntEstado());
-            }
-            }
+            } }
 			else {
 				canMove = true;
 			}
-			_manager.setPacman(_player.getPosition().y, _player.getPosition().x);
-			
-			_manager.update();
+
+			_ghostManager.setPacman(_player.getPosition().y, _player.getPosition().x);
+			_ghostManager.update();
 
 			if (canMove) {
 				_player.update();
 				
 			}
-			else {
-				_player.setEstado(0); // Resetea el estado si no puede moverse
+			//else {
+			//	_player.setEstado(0); // Resetea el estado si no puede moverse
+			//}
+		}
+		else if(_collision.getJefe() == false) { // Escena 2
+			if (ticktest > 60) {
+				scene2();
+				//setScene2();
 			}
-
-			
-
+			else if (ticktest == 60) {
+				std::cout << "START FINAL FIGHT" << std::endl;
+			}
 		}
-		else { // Escena 2
-
-			scene2();
-		}
+	}
+	else if (ticktest == 60) {
+		std::cout << "START YOUR ADVENTURE" << std::endl;
 	}
 	else {
 		pause--;
 	}
-
 }
 
 void Scene::scene2()
 {
-	_player.SoloX(_collision.getJefe());// Si .SoloX(False) entonces se activa el movimiento solo en el eje x
-	int estado = _player.actualState();
-	bool canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
-	if (canMove) {
-		_player.update();
-
-	}
-	else if (nombre == false) { //el bool nombre actua como una bandera para setear la posicion el pacman en la escena 2
+	if (!nombre) { 
 		nombre = true;
-		_player.setPosition(354, 704);//setea la posicion inicial del pacman para la escena 2
+		setScene2();
 	}
-	else if (nombre != false) {
+	//_player.SoloX(true); // Si .SoloX(False) entonces se activa el movimiento solo en el eje x
+	//bool canMove;
+	_player.handleInput2();
+	
 
-		_player.update();
+	/*if (_player.getValidMove()) {
+		
+		canMove = _collision.CheckCollision(estado, _mapa, _player.getPosition().y, _player.getPosition().x);
+		if (!canMove) {
+			_player.setEstado(_player.getAntEstado());
+		}
 	}
 	else {
-		_player.setEstado(0); // Resetea el estado si no puede moverse
-	}
-
-	_collision.PortalCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x); //portal donde el pacman se teletransporta del borde izuiquierdo hacia el borde derecho y viceversa
+		canMove = true;
+	}*/
 	
-	if (nombre != false) {
-		cont--;//contador que permite la movilidad del fantasma
+	//_collision.PortalCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x); // portal donde el pacman se teletransporta del borde izuiquierdo hacia el borde derecho y viceversa
+	_collision.ObjCollision(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
+	if (nombre) {
+		cont--; // contador que permite la movilidad del fantasma
 		if (cont > -100) {
 			cont = -10;
-			//std::cout <<"X: " << _boss.getPosition().x << std::endl;
 		}
 	}
 
-	if (_player.Shoot()) {
-		_balas.bala(_player.getPosition().x, _player.getPosition().y, cont);
-	}
-	else {
-		cont = 0;
-	}
-	_balas.update();
+    if (_player.Shoot()) {
+        _balas.bala(_player.getPosition().x, _player.getPosition().y, cont);
+    } else {
+        cont = 0;
+    } 
+
+    if (_boss.CheckCollision(_balas) && _player.getIsContactShot() == false) { //Collision entre el boss y las balas
+		_player.setIsContactShot(true);
+		_balas.position();
+        _boss.setvida(_boss.getvida() - 1);
+        _mapa.setMapa(0, _boss.getvida() + 3, 0);
+        if (_boss.getvida() == 0) isPlaying = false;
+    }
+	_collision.Scene2Bounds(_mapa, _player, _player.getPosition().y, _player.getPosition().x);
+	_mapa.updateItem();
 	_balas.update();
 	_boss.update();
-
-	if (_boss.CheckCollision(_balas)) {
-		std::cout << "Colisión detectada!" << std::endl; //17
-		_boss.setvida(_boss.getvida() - 1);
-		_mapa.setMapa(0, _boss.getvida() + 1, 0);
-	
-		if (_boss.getvida() == 0) isPlaying = false;
-		
-	
-		// Añade aquí la lógica para manejar la colisión
-	}
-
-	
-
+	/*if (canMove) {*/
+		_player.update();
+	/*}*/
 }
 
 void Scene::setScene()
 {
 	_player.setPosition(352, 480);
 	_player.ResetPlayer();
-	_manager.setAll();
-	//_player.setTickMove(0);
-	//_tickmoveG = 0;
+	_ghostManager.setAll();
+	ticktest = 0;
+}
+
+void Scene::setScene2()
+{
+	_player.ResetPlayer();
+	_player.setPosition(352, 704);
+	_boss.resetAll();
+	_balas.position();
+	ticktest = 0;
 }
 
 void Scene::ResetAll()
 {
 	_player.setPosition(352, 480);
 	_player.ResetPlayer();
-	//_player.setTickMove(0);
 	_vidas.setVidas(3);
-	//_tickmoveG = 0;
 	nombre = false;
-	_manager.setAll();
+	_ghostManager.setAll();
 	_mapa.initialMap();
 	_collision.setAll();
 	banderaScared = false;
-
+	ticktest = 0;
 }
 
 bool Scene::getIsPlaying()
@@ -195,7 +198,7 @@ void Scene::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	if (_collision.getJefe() != false) {
 		target.draw(_mapa, states);
 		target.draw(_player, states);
-		target.draw(_manager, states);
+		target.draw(_ghostManager, states);
 	}
 	else {
 		target.draw(_mapa, states);
@@ -205,9 +208,3 @@ void Scene::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	}	
 	
 }
-
-
-
-
-
-

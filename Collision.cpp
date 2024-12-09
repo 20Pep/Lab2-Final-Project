@@ -1,18 +1,17 @@
 #include "Collision.h"
 #include "iostream"
 
+//Manejo de colisiones
 
 bool Collision::CheckCollision(int state, Mapa& _mapa, int posy, int posx)
-{
-   
-      int CurrentPosY = posy / 32; //calcula por cada celda de 8 de logicMap
-      int CurrentPosX = posx / 32;
-
+{   
+     int CurrentPosY = posy / 32; //calcula por cada celda de 8 de logicMap
+     int CurrentPosX = posx / 32;
 
     switch (state)
     {
     case 1:
-        if (_mapa.getMapa(CurrentPosY -1, CurrentPosX) != 1) { //los -1 y +4 los deje asi pq asi me funco, habria que verlo mejor
+        if (_mapa.getMapa(CurrentPosY -1, CurrentPosX) != 1) { 
             return true;
         }
         
@@ -34,10 +33,9 @@ bool Collision::CheckCollision(int state, Mapa& _mapa, int posy, int posx)
         }
         break;
     }
-
     return false;
-
 }
+
 
 
 int Collision::GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, int posY, int posX, int ghost, sf::FloatRect o)
@@ -48,11 +46,6 @@ int Collision::GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, 
         std::cout << "TE COMI ";
         return ghost;
     }
-  /*  if (posx == posX && posy == posY && hunter) {
-        std::cout << "TE COMI ";
-        return ghost;
-    }
-*/
     else if (_player.returnBounds().intersects(o) && !hunter)
     {
         return 0;
@@ -60,48 +53,55 @@ int Collision::GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, 
     return -1;
 }
 
+void Collision::Scene2Bounds(Mapa& _mapa, Player& _player, int posY, int posX)
+{
+    if (posX <= 0 ) {
+        _player.setPosition(0, posY); // Mantener en el borde izquierdo
+    }
+    else if (posX >= 704 ) {
+        _player.setPosition(704, posY); // Mantener en el borde derecho
+    }
+    else if (posY >= 768) {
+        _player.setPosition(posX, 768); // Mantener en el borde inferior
+    }
+	else if (posY <= 640) {
+		_player.setPosition(posX, 640); // Mantener en el borde superior
+	}
+}
+
+
 void Collision::ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX)
 {
-    int CurrentPosY = posY / cell;
-    int CurrentPosX = posX / cell;
-    int maxim;
-    //bool pass = true;
-    
-
-    if (_mapa.getMapa(CurrentPosY, CurrentPosX) == 2) {
+    int currentPosY = posY / cell;
+    int currentPosX = posX / cell;
+    int foodGoal;
+ 
+    if (_mapa.getMapa(currentPosY, currentPosX) == 2) {
         contFood++;//cuenta cuanto se comio el pacman
-        maxim = contFood;
-        if (maxim >= 151) {//151
-           // pass = false;
+        foodGoal = contFood;
+        if (foodGoal >= 1) {//151
             origen = false;
-           _mapa.Boss();
+            _mapa.Boss();
+            std::cout << "CAMBIO" << std::endl;
         }
-
-        _mapa.setMapa(CurrentPosY, CurrentPosX, 0);
-        
-       
-        if (getJefe() == false) {
-             
-        std::cout << "CAMBIO" << std::endl;
-          }
+        _mapa.setMapa(currentPosY, currentPosX, 0);
     }
     energizerTick++;
-    if (_mapa.getMapa(CurrentPosY, CurrentPosX) == 3) {
-        _mapa.setMapa(CurrentPosY, CurrentPosX, 0);    
+    if (_mapa.getMapa(currentPosY, currentPosX) == 3) {
+        _mapa.setMapa(currentPosY, currentPosX, 0);    
         _player.setHunter(true);
+		if(origen == false)_player.setCanShoot(true);
         energizerTick = 0;
     }
     else if (energizerTick >= (60 * 10)) {
         _player.setHunter(false);
-    
     }
-    
 }
 
 void Collision::PortalCollision(Mapa& _mapa, Player& _player, int posY, int posX) {
 
 
-    if (getJefe() != false) { //si getJefe devuelve true entonces estaran los portales de la escena 1 activos
+    /*if (getJefe() != false) {*/ //si getJefe devuelve true entonces estaran los portales de la escena 1 activos
         if (posX == 0 && posY == 384) {
             _player.setPosition(672, 384);
 
@@ -109,17 +109,17 @@ void Collision::PortalCollision(Mapa& _mapa, Player& _player, int posY, int posX
         else if (posX == 704 && posY == 384) {
             _player.setPosition(32, 384);
         }
-    }
-    else { //en el caso que sea false se desactivaran los portales de la escena 1 para habilitar los de la escena 2
+    //}
+    //else { //en el caso que sea false se desactivaran los portales de la escena 1 para habilitar los de la escena 2
 
-        if (posX <= 0 && posY == 704) {
-            _player.setPosition(714, 704);
+    //    if (posX <= 0 && posY == 704) {
+    //        _player.setPosition(714, 704);
 
-        }
-        else if (posX >= 714 && posY == 704) {
-            _player.setPosition(0, 704);
-        }
-    }
+    //    }
+    //    else if (posX >= 714 && posY == 704) {
+    //        _player.setPosition(0, 704);
+    //    }
+    //}
 }
 
 void Collision::setAll()
@@ -129,7 +129,7 @@ void Collision::setAll()
     origen = true;
 }
 
-int Collision::getJefe() const
+int Collision::getJefe() const 
 {
     return origen;
 }

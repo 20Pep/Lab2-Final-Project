@@ -17,7 +17,7 @@ private:
 	Mapa _mapa;
 	Collision _collision;
 	Ghost _ghost;
-	GhostManager _manager;
+	GhostManager _ghostManager;
 	Vida _vidas;
 	Boss _boss;
 	Balas _balas;
@@ -34,6 +34,7 @@ public:
 	void update();
 	void scene2();
 	void setScene();
+	void setScene2();
 	void ResetAll();
 	bool getIsPlaying();
 	void setIsPlaying();

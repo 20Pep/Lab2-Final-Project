@@ -13,6 +13,7 @@ private:
 public:
 	Balas();
 	void bala(float x, float y ,float v);
+	void position();
 	void update();	
 	sf::FloatRect getGlobalBounds() const; //getGlobalBounds tendria que permitir reconocer los huesos que tiene el sprite de bala, no reconoce
 	void draw(sf::RenderTarget& target, sf::RenderStates states)const;

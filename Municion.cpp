@@ -15,6 +15,10 @@ void Balas::bala(float x, float y, float v)
 
 	vel = v;
 }
+void Balas::position()
+{
+	setPosition(900, 800);
+}
 void Balas::update()
 {
 	move(0, vel);

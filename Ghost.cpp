@@ -22,7 +22,8 @@ Ghost::Ghost(int y, int x, int coloor, int tam)
 }
 
 Ghost::Ghost(){
-
+	isAlive = true;
+	Scared = false;
 }
 
 sf::FloatRect Ghost::getBounds()

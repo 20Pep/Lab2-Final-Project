@@ -8,6 +8,8 @@ class Ghost : public sf::Drawable, public sf::Transformable
 protected:
 	sf::CircleShape _head;
 	sf::Vector2f _vel;
+	sf::Sprite sp;
+	sf::Texture textu;
 	int _estado;
 	int _EstadoAnt;
 	int _homeY;
@@ -17,8 +19,7 @@ protected:
 	bool Scared;
 	bool isValidMove;
 	int tickValidMove;
-	sf::Sprite sp;
-	sf::Texture textu;
+
 public:
 	Ghost(int y, int x, int coloor, int tam);
 	Ghost();

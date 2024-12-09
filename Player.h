@@ -12,7 +12,7 @@ private:
 	sf::Vector2f _vel;
 	bool hunter;
 	bool disparo = false;
-	bool movX = true;
+	//bool movX = true;
 	sf::Sprite sp;
 	sf::Texture textu;
 	int _tickTeclaZ;
@@ -20,6 +20,9 @@ private:
 	int _antEstado;
 	int _lastkey;
 	int Look;
+	bool isContactShot;
+	bool canShoot;
+ 
 	Mapa _mapa;
 
 public:
@@ -28,6 +31,7 @@ public:
 	sf::FloatRect returnBounds();
 	void ResetPlayer();
 	void handleInput(int posy, int posx);
+	void handleInput2();
 	void setLastkey(int key);
 	int actualState();
 	void update();
@@ -36,11 +40,15 @@ public:
 	int setEstado(int state);
 	int getTickMove();
 	bool getValidMove();
+	bool getCanShoot();
+	void setCanShoot(bool value);
 	int setTickMove(int tick);
 	bool getHunter();
 	void setHunter(bool state);
 	bool Shoot();
-	bool SoloX(bool posx);
+	bool getIsContactShot();	
+	void setIsContactShot(bool value);
+	//bool SoloX(bool posx);
 	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;
 };
 

@@ -22,6 +22,7 @@ protected:
 
 public:
 	Boss();
+	void resetAll();
 	void update();
 	bool CheckCollision(const Balas& bala);
 	void updateHitbox();

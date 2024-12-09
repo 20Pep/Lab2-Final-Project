@@ -9,6 +9,9 @@ protected:
 	float _altura = 25;
 	int logicmap[100][92] = { 0 };
 	float _mapa[25][23];
+	bool itemVisible = false;
+	sf::Clock itemClock;
+	sf::Vector2i itemPosition;
 
 public:
 	Mapa();
@@ -19,5 +22,6 @@ public:
 	int getRetorno(int i, int j)const ;
 	int getLogicMap(int y, int x);
 	void Boss();
+	void updateItem();
 };
 
