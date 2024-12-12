@@ -41,7 +41,7 @@ Inteligencia artificial básica para el fantasma gigante
 Requisitos Previos
 
 Compilador de C++
-[Cualquier librería específica]
+SFML
 
 Pasos de Instalación
 
