@@ -12,18 +12,33 @@ Ghost::Ghost(int y, int x, int coloor, int tam)
 	_homeX = x;
 	tickValidMove = 0;
 
-	
-
-	textu.loadFromFile("Recursos/images/Ghost16.png");
+	if (!textu.loadFromFile("Recursos/images/Ghost16.png")) {
+		// Manejar el error de carga de la textura
+		std::cerr << "Error al cargar la textura de fantasma" << std::endl;
+	}
 	sp.setTexture(textu);
-	setColor(Colour);
-	sp.setTextureRect(sf::IntRect(4 * 0, 0, 29, 32));
+	//setColor(Colour);
+	sp.setTextureRect(sf::IntRect(0, 0, 29, 32));
 
 }
 
 Ghost::Ghost(){
 	isAlive = true;
 	Scared = false;
+	_estado = 0;
+	_EstadoAnt = 0;
+	_homeY = 0;
+	_homeX = 0;
+	Colour = 0;
+	tickValidMove = 0;
+	isValidMove = true;
+
+	if (!textu.loadFromFile("Recursos/images/Ghost16.png")) {
+		// Manejar el error de carga de la textura
+		std::cerr << "Error al cargar la textura de fantasma" << std::endl;
+	}
+	sp.setTexture(textu);
+	sp.setTextureRect(sf::IntRect(0, 0, 29, 32));
 }
 
 sf::FloatRect Ghost::getBounds()
@@ -66,6 +81,12 @@ void Ghost::setAll(int color)
 	tickValidMove = 0;
 	isValidMove = true;
 	_vel = { 0, 0 };
+}
+
+void Ghost::setHome(int y, int x)
+{
+	_homeY = y;
+	_homeX = x;
 }
 
 int Ghost::getHomeY()
@@ -184,7 +205,6 @@ void Ghost::update()
 
 void Ghost::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	
 	states.transform *= getTransform();
 	target.draw(sp, states);
 }

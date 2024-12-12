@@ -6,23 +6,22 @@ class Player : public sf::Drawable, public sf::Transformable
 {
 private:
 
-
-	int _tickmove;
-	int _state;
 	sf::Vector2f _vel;
-	bool hunter;
-	bool disparo = false;
-	//bool movX = true;
 	sf::Sprite sp;
 	sf::Texture textu;
+	int _tickmove;
+	int _state;
 	int _tickTeclaZ;
-	bool validMove;
 	int _antEstado;
 	int _lastkey;
 	int Look;
+	bool validMove;
 	bool isContactShot;
 	bool canShoot;
- 
+	bool chased;
+	bool hunter;
+	bool disparo = false;
+	//bool movX = true;
 	Mapa _mapa;
 
 public:
@@ -48,6 +47,8 @@ public:
 	bool Shoot();
 	bool getIsContactShot();	
 	void setIsContactShot(bool value);
+	void setChased(bool state);
+	bool getChased();
 	//bool SoloX(bool posx);
 	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;
 };

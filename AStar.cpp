@@ -1,7 +1,8 @@
 #include "AStar.h"
 
 AStar::AStar() {
-    InitializeNodes();
+    // Inicializar con el mapa normal por defecto
+    InitializeNodes(_mapa);
 }
 
 void AStar::setStart(int y, int x) { //alto, ancho
@@ -16,13 +17,12 @@ AStar::Node* AStar::getNode(int y, int x) {
     return &nodosmap[y][x];
 }
 
-void AStar::InitializeNodes() {
+void AStar::InitializeNodes(Mapa& mapa) {
     for (int x = 0; x < _ancho; ++x) {
         for (int y = 0; y < _alto; ++y) {
             nodosmap[y][x].x = x;
             nodosmap[y][x].y = y;
-            nodosmap[y][x].Obstacle = (_mapa.getMapa(y, x) == 1 || _mapa.getMapa(y, x) == 4);
-
+            nodosmap[y][x].Obstacle = (mapa.getMapa(y, x) == 1 || mapa.getMapa(y, x) == 4);
 
             if (y > 0) nodosmap[y][x].vecNeighbours.push_back(&nodosmap[y - 1][x]);
             if (y < _alto - 1) nodosmap[y][x].vecNeighbours.push_back(&nodosmap[y + 1][x]);
@@ -87,8 +87,7 @@ bool AStar::Algoritmo(int& pathLength, int& stateG) {
 
     pathLength = 0;
 
-    if (Current == GoalN)
-    {
+    if (Current == GoalN) {
         Node* antesP = StartN;
         Node* p = GoalN;
         while (p->Parent != nullptr) {
@@ -97,13 +96,9 @@ bool AStar::Algoritmo(int& pathLength, int& stateG) {
                 antesP = p;
             }
             p = p->Parent;
-
         }
         stateG = State(p, antesP);
     }
-
-
-    //   std::cout << pathLength << "  ";
 
     return true;
 }

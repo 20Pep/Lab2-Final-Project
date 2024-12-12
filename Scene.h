@@ -16,7 +16,6 @@ private:
 	Player _player;
 	Mapa _mapa;
 	Collision _collision;
-	Ghost _ghost;
 	GhostManager _ghostManager;
 	Vida _vidas;
 	Boss _boss;

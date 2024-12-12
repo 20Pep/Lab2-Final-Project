@@ -38,15 +38,15 @@ bool Collision::CheckCollision(int state, Mapa& _mapa, int posy, int posx)
 
 
 
-int Collision::GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, int posY, int posX, int ghost, sf::FloatRect o)
+int Collision::GhostAndPacman(Mapa& _mapa, Player& _player, Ghost& _ghost, int i)
 {
     bool hunter = _player.getHunter();
-    
-    if (_player.returnBounds().intersects(o) && hunter) {
-        std::cout << "TE COMI ";
-        return ghost;
+	bool scared = _ghost.getScared();
+
+    if (_player.returnBounds().intersects(_ghost.getBounds()) && hunter && scared ) {
+        return i;
     }
-    else if (_player.returnBounds().intersects(o) && !hunter)
+	else if (_player.returnBounds().intersects(_ghost.getBounds()) && (!hunter || !scared))
     {
         return 0;
     }
@@ -65,7 +65,7 @@ void Collision::Scene2Bounds(Mapa& _mapa, Player& _player, int posY, int posX)
         _player.setPosition(posX, 768); // Mantener en el borde inferior
     }
 	else if (posY <= 640) {
-		_player.setPosition(posX, 640); // Mantener en el borde superior
+		_player.setChased(true);
 	}
 }
 
@@ -79,48 +79,41 @@ void Collision::ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX)
     if (_mapa.getMapa(currentPosY, currentPosX) == 2) {
         contFood++;//cuenta cuanto se comio el pacman
         foodGoal = contFood;
-        if (foodGoal >= 1) {//151
+        if (foodGoal >= 60) {//151
             origen = false;
             _mapa.Boss();
-            std::cout << "CAMBIO" << std::endl;
         }
         _mapa.setMapa(currentPosY, currentPosX, 0);
     }
     energizerTick++;
-    if (_mapa.getMapa(currentPosY, currentPosX) == 3) {
+    if (_mapa.getMapa(currentPosY, currentPosX) == 3 && origen == true) {
         _mapa.setMapa(currentPosY, currentPosX, 0);    
         _player.setHunter(true);
-		if(origen == false)_player.setCanShoot(true);
         energizerTick = 0;
     }
     else if (energizerTick >= (60 * 10)) {
         _player.setHunter(false);
     }
+
+    if (_mapa.getMapa(currentPosY, currentPosX) == 3 && origen == false) {
+        _mapa.setMapa(currentPosY, currentPosX, 0);
+        _player.setHunter(false);
+        _player.setCanShoot(true);
+		energizerTick = 0;
+    }
 }
 
 void Collision::PortalCollision(Mapa& _mapa, Player& _player, int posY, int posX) {
 
+    if (posX == 0 && posY == 384) {
+        _player.setPosition(672, 384);
 
-    /*if (getJefe() != false) {*/ //si getJefe devuelve true entonces estaran los portales de la escena 1 activos
-        if (posX == 0 && posY == 384) {
-            _player.setPosition(672, 384);
-
-        }
-        else if (posX == 704 && posY == 384) {
-            _player.setPosition(32, 384);
-        }
-    //}
-    //else { //en el caso que sea false se desactivaran los portales de la escena 1 para habilitar los de la escena 2
-
-    //    if (posX <= 0 && posY == 704) {
-    //        _player.setPosition(714, 704);
-
-    //    }
-    //    else if (posX >= 714 && posY == 704) {
-    //        _player.setPosition(0, 704);
-    //    }
-    //}
+    }
+    else if (posX == 704 && posY == 384) {
+        _player.setPosition(32, 384);
+    }
 }
+
 
 void Collision::setAll()
 {

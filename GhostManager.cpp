@@ -1,26 +1,44 @@
 #include "GhostManager.h"
 #include "iostream"
-GhostManager::GhostManager() : _red(352, 352, 1, 16), _pink(416, 352, 2, 16), _blue(416, 320, 3, 16), _orange(416,384, 4, 16) {
+GhostManager::GhostManager() {
+
+	_ghosts[0].setHome(352, 352); // Red
+	_ghosts[1].setHome(416, 352); // Pink
+	_ghosts[2].setHome(416, 320); // Blue
+	_ghosts[3].setHome(416, 384); // Orange
+	for (int i = 0; i < 4; i++)
+	{
+		_ghosts[i].setAll(i + 1);
+	}
 	tick = 0;
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	homeBlue = true;
 	homeOrange = true;
-	homePink = true; //ver este error
+	homePink = true;
 	Pest = 0;
-
+	scene2 = false;
 }
 
-void GhostManager::setAll()
+void GhostManager::set2(Mapa& _map)
 {
-	_red.setAll(1);
-	_pink.setAll(2);
-	_blue.setAll(3);
-	_orange.setAll(4);
-	homeBlue = true; 
-	homeOrange = true;
-	homePink = true; //ver este error
-	tick = 0;
+	_ghosts[1].setColor(2);
+	_ghosts[1].setPosition(0, 640);
+	_ghosts[2].setColor(3);
+	_ghosts[2].setPosition(704, 640 );
+	_AStar.InitializeNodes(_map);
+	scene2 = true;
+}
 
+void GhostManager::setAll(Mapa& _map) {
+	for (int i = 0; i < 4; ++i) {
+		_ghosts[i].setAll(i + 1);
+	}
+	homeBlue = true;
+	homeOrange = true;
+	homePink = true;
+	tick = 0;
+	scene2 = false;
+	_AStar.InitializeNodes(_map);
 }
 
 void GhostManager::setTick(int t)
@@ -30,20 +48,17 @@ void GhostManager::setTick(int t)
 
 void GhostManager::setScared(bool is)
 {
-	Ghost* ghost ;
-	int i = 0;
-	for (Ghost* ghost : { &_red, &_pink, &_blue, &_orange }) {
-		i++;
-		ghost->setScared(is);
+	for (int i = 0; i < 4; ++i) {
+		Ghost& ghost = _ghosts[i];
+		ghost.setScared(is);
 		if (is) {
-			ghost->setColor(5);
-			ghost->EstadoActual(0); // Resetear el estado actual
-			ghost->setEstAnt(0);    // Resetear el estado anterior
+			ghost.setColor(5);
+			ghost.EstadoActual(0); // Resetear el estado actual
+			ghost.setEstAnt(0);    // Resetear el estado anterior
 		}
 		else {
-			ghost->setColor(i);
+			ghost.setColor(i + 1);
 		}
-
 	}
 }
 
@@ -56,83 +71,6 @@ void GhostManager::setPest(int estado)
 {
 	Pest = estado;
 }
-
-void GhostManager::setPos(int y, int x, int n)
-{
-	switch (n)
-	{
-	case 1:
-		_red.setPosition(x, y);
-		break;
-	case 2:
-		_pink.setPosition(x, y);
-		break;
-	case 3:
-		_blue.setPosition(x, y);
-		break;
-	case 4:
-		_orange.setPosition(x, y);
-		break;
-	}
-}
-
-float GhostManager::GetPosY(int n)
-{
-	switch (n)
-	{
-	case 1:
-		return _red.getPosition().y;
-		break;
-	case 2:
-		return _pink.getPosition().y;
-		break;
-	case 3:
-		return _blue.getPosition().y;
-		break;
-	case 4:
-		return _orange.getPosition().y;
-		break;
-	}
-}
-
-float GhostManager::GetPosX(int n)
-{
-	switch (n)
-	{
-	case 1:
-		return _red.getPosition().x;
-		break;
-	case 2:
-		return _pink.getPosition().x;
-		break;
-	case 3:
-		return _blue.getPosition().x;
-		break;
-	case 4:
-		return _orange.getPosition().x;
-		break;
-	}
-}
-
-sf::FloatRect GhostManager::getBounds(int x)
-{
-	switch (x)
-	{
-	case 1:
-		return _red.getBounds();
-		break;
-	case 2:
-		return _pink.getBounds();
-		break;
-	case 3:
-		return _blue.getBounds();
-		break;
-	case 4:
-		return _orange.getBounds();
-		break;
-	};
-}
-
 
 void GhostManager::exitHome()
 {
@@ -148,27 +86,6 @@ void GhostManager::exitHome()
 		}
 
 
-}
-
-void GhostManager::returnHome(int ghost)
-{
-	
-	switch (ghost)
-	{
-	case 1: 
-		_red.setIsAlive(false);
-		break;
-	case 2:  
-		_pink.setIsAlive(false);
-		break;
-	case 3: 
-		_blue.setIsAlive(false);
-		break;
-	case 4: 
-		_orange.setIsAlive(false);
-		break;
-	default: return;
-	}
 }
 
 //bool GhostManager::pathHome(Ghost& _ghost, int Ygoal, int Xgoal)
@@ -208,6 +125,15 @@ void GhostManager::returnHome(int ghost)
 //
 //	return canMoveGhost;
 //}
+
+Ghost& GhostManager::getGhost(int index) {
+	if (index >= 0 && index < 4) {
+		return _ghosts[index];
+	}
+	else {
+		throw std::out_of_range("Index out of range");
+	}
+}
 
 sf::Vector2i GhostManager::targetPink(int estado, int y, int x)
 {
@@ -330,95 +256,145 @@ bool GhostManager::Frightened(Ghost& _ghost)
 	return false;
 }
 
-void GhostManager::update()
-{
+void GhostManager::update() {
 	tick++;
-
 	exitHome();
 
-	// Array de punteros a fantasmas
-	Ghost* ghosts[] = { &_red, &_pink, &_blue, &_orange };
-
-	/*if (tick % 120 == 0) {
-		std::cout << tick <<"  ";
-	}*/
-
 	for (int i = 0; i < 4; ++i) {
-		Ghost* ghost = ghosts[i];
+		Ghost& ghost = _ghosts[i];
 
-		if (!ghost->getIsAlive()) {
-			// Si el fantasma no está vivo, lo devolvemos a su posición inicial
-			ghost->setAll(i + 1);
+		if (!ghost.getIsAlive()) {
+			ghost.setAll(i + 1);
 			continue;
 		}
-		if (ghost->getValidMove()) {
-			
-			if (ghost->getScared()) {
-				// Comportamiento asustado
-				if (Frightened(*ghost)) {
-					ghost->setValidMove(false);
-					ghost->update();
+		if (ghost.getValidMove()) {
+			if (ghost.getScared()) {
+				if (Frightened(ghost)) {
+					ghost.setValidMove(false);
+					ghost.update();
 				}
 			}
 			else {
-				// Comportamiento normal (Scatter o Chase)
 				bool moved = false;
-
-				if (ghost == &_red) {
-					if (Scatter(*ghost, 3, 18) && tick <= 60*12) {
+				if (i == 0) { // Red
+					if (Scatter(ghost, 3, 18) && tick <= 60 * 12) {
 						moved = true;
 					}
-					else if (Chase(*ghost, Py, Px) && tick > 60*12) {
+					else if (Chase(ghost, Py, Px) && tick > 60 * 12) {
 						moved = true;
 					}
 				}
-				else if (ghost == &_pink) {
+				else if (i == 1) { // Pink
 					sf::Vector2i pinkTarget = targetPink(Pest, Py, Px);
-					if (homePink == false) {
-						if (Scatter(*ghost, 3, 4) && tick <= 60 * 12){
+					if (!homePink) {
+						if (Scatter(ghost, 3, 4) && tick <= 60 * 12) {
 							moved = true;
 						}
-						else if (Chase(*ghost, pinkTarget.y, pinkTarget.x) && tick > 60 * 12) {
+						else if (Chase(ghost, pinkTarget.y, pinkTarget.x) && tick > 60 * 12) {
 							moved = true;
 						}
 					}
 				}
-				else if (ghost == &_blue) {
-					if (homeBlue == false && Scatter(*ghost, 22, 18)) {
+				else if (i == 2) { // Blue
+					if (!homeBlue && Scatter(ghost, 22, 18)) {
 						moved = true;
 					}
 				}
-				else if (ghost == &_orange) {
-					if (homeOrange == false && Scatter(*ghost, 22, 2)) {
+				else if (i == 3) { // Orange
+					if (!homeOrange && Scatter(ghost, 22, 2)) {
 						moved = true;
 					}
 				}
 
 				if (moved) {
-					ghost->setValidMove(false);
-					ghost->update();
+					ghost.setValidMove(false);
+					ghost.update();
 				}
 			}
 		}
 		else {
-			//ghost->setEstado(ghost->getEstAnt());
-			ghost->update();
+			ghost.update();
 		}
 	}
 
-	// Reiniciar el tick si es necesario
-	if (tick > 60*34) {  // Puedes ajustar este valor según tus necesidades
+	if (tick > 60 * 34) {
 		tick = 0;
 	}
-
-	
 }
 
-	
-void GhostManager::draw(sf::RenderTarget& target, sf::RenderStates states) const
+bool GhostManager::Chase2(Ghost& _ghost, int pacmanY, int pacmanX)
 {
-	target.draw(_red, states);
-	target.draw(_pink, states);
-	target.draw(_blue, states);
-	target.draw(_orange, states);
+	float startY = _ghost.getPosition().y / 32;
+	float startX = _ghost.getPosition().x / 32;
+	_AStar.setStart(startY, startX);
+	_AStar.setGoal(pacmanY, pacmanX);
+
+	int pathLength = 0;
+	int Gestado;
+	_AStar.Algoritmo(pathLength, Gestado);
+
+	int oppositeState = _ghost.getOppositeState(_ghost.getEstAnt());
+	int alternativeStates[] = { 1, 3, 2, 4 };
+
+	// Si ya está en el tile objetivo, elige una dirección que no sea la opuesta
+	if (startY == pacmanY && startX == pacmanX) {
+		for (int dir : alternativeStates) {
+			if (dir != oppositeState) {
+				Gestado = dir;
+				break;
+			}
+		}
+	}
+	else {
+		// Lógica existente para moverse hacia el objetivo
+		if (Gestado == oppositeState) {
+			for (int state : alternativeStates) {
+				if (state != oppositeState) {
+					Gestado = state;
+					break;
+				}
+			}
+		}
+		if (Gestado == oppositeState) {
+			Gestado = _ghost.getEstAnt();
+		}
+	}
+	_ghost.EstadoActual(Gestado);
+	_ghost.setEstAnt(Gestado);
+
+	return true;
+}
+
+void GhostManager::updateChaseMode()
+{
+	for (int i = 1; i < 3; ++i) {
+		Ghost& ghost = _ghosts[i];
+
+		if (ghost.getValidMove()) {
+			bool moved = false;
+			if (Chase2(ghost, Py, Px)) {
+				moved = true;
+			}
+
+			if (moved) {
+				ghost.setValidMove(false);
+				ghost.update();
+			}
+		}
+		else {
+			ghost.update();
+		}
+	}
+}
+	
+void GhostManager::draw(sf::RenderTarget& target, sf::RenderStates states) const {
+	if (!scene2) {
+		for (int i = 0; i < 4; ++i) {
+			target.draw(_ghosts[i], states);
+		}
+	}
+	else {
+		target.draw(_ghosts[1], states); // Pink
+		target.draw(_ghosts[2], states); // Blue
+	}
 }

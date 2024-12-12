@@ -27,7 +27,7 @@ private:
     int _ancho = 23;
 
 
-    void InitializeNodes();
+    
 
 public:
     Node* StartN = nullptr;
@@ -36,7 +36,7 @@ public:
     AStar();
     void setStart(int y, int x);
     void setGoal(int y, int x);
-
+    void InitializeNodes(Mapa& mapa);
     bool Algoritmo(int& pathLength, int& stateG);
     int State(Node* a, Node* b);
 

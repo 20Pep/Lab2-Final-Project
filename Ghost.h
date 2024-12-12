@@ -21,28 +21,26 @@ protected:
 	int tickValidMove;
 
 public:
-	Ghost(int y, int x, int coloor, int tam);
-	Ghost();
-
-	sf::FloatRect getBounds();
-	void setColor(int colour = 5);
-	void setAll(int color);
-	void setEstAnt(int e);
-	void setEstado(int e);
-	void setIsAlive(bool live);
-	void setScared(bool is);
-	void setValidMove(bool valid);
-	bool getValidMove();
-	int getHomeY();
-	int getHomeX();
-	bool getIsAlive();
-	bool getScared();
-	int getEstAnt();
-	int getEstado();
-	int getOppositeState(int state);
-	int EstadoActual(int e);
-	
-	void update();
-	void draw(sf::RenderTarget& target, sf::RenderStates states)const override;
-	
+    Ghost(int y, int x, int coloor, int tam);
+    Ghost();
+    sf::FloatRect getBounds();
+    void setColor(int colour = 5);
+    void setAll(int color);
+	void setHome(int y, int x);
+    void setEstAnt(int e);
+    void setEstado(int e);
+    void setIsAlive(bool live);
+    void setScared(bool is);
+    void setValidMove(bool valid);
+    bool getValidMove();
+    int getHomeY();
+    int getHomeX();
+    bool getIsAlive();
+    bool getScared();
+    int getEstAnt();
+    int getEstado();
+    int getOppositeState(int state);
+    int EstadoActual(int e);
+    void update();
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 };

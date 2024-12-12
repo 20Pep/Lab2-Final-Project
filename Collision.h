@@ -5,7 +5,6 @@
 #include "Ghost.h"
 #include "Boss.h"
 
-
 class Collision {
 private:
 
@@ -18,10 +17,11 @@ private:
 public:
 	
 	bool CheckCollision(int state, Mapa& _mapa, int posy, int posx);
-	int GhostAndPacman(Mapa& _mapa, int posx, int posy, Player& _player, int posY, int posX, int ghost, sf::FloatRect o);
+	int GhostAndPacman(Mapa& _mapa, Player& _player, Ghost& _ghost, int i);
 	void Scene2Bounds(Mapa& _mapa, Player& _player, int posY, int posX);
 	void ObjCollision(Mapa& _mapa, Player& _player, int posY, int posX);
 	void PortalCollision(Mapa& _mapa, Player& _player, int posY, int posX);
+//	void PortalCollisionGhost(Mapa& _mapa, GhostManager& _ghostManager);
 	void setAll();
 
 	int getJefe()const;

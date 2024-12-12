@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "iostream"
+//Manejo de el jugador
 
 Player::Player()
 {
@@ -29,11 +30,11 @@ void Player::ResetPlayer()
 	validMove = false;
 	disparo = true;
 	canShoot = false;
+	chased = false;
 }
 
 bool Player::checkCollision(int x, int y) //esto deberia estar en collision.cpp
 {
-	// Assuming each cell is 32x32 pixels
 	int cellX = x / 32;
 	int cellY = y / 32;
 
@@ -120,7 +121,6 @@ void Player::update()
 	}
 	_tickmove++;
 
-	//if (SoloX(movX) == true) {
 		switch (_state)
 		{
 		case 0:
@@ -145,23 +145,6 @@ void Player::update()
 		default:
 			break;
 		}
-	//}
-	//else if (SoloX(movX) == false) {
-	//	switch (_state)
-	//	{
-	//	case 0:
-	//		_vel = { 0,0 };
-	//		break;
-	//	case 3:
-	//		_vel = { -2,0 };
-	//		break;
-	//	case 4:
-	//		_vel = { 2,0 }; 
-	//		break;
-	//	default:
-	//		break;
-	//	}
-	//}
 
 	if (_tickmove <= 16) {
 		move(_vel);
@@ -267,6 +250,14 @@ bool Player::getIsContactShot(){
 
 void Player::setIsContactShot(bool value) {
     isContactShot = value;
+}
+void Player::setChased(bool state)
+{
+	chased = state;
+}
+bool Player::getChased()
+{
+	return chased;
 }
 //bool Player::SoloX(bool posx)
 //{
